@@ -9,6 +9,7 @@
 const GAME_TOTAL_LEVELS = 300;
 const GAME_QUESTIONS_PER_LEVEL = 8;
 const GAME_PASS_RATIO = 0.75; // 6/8
+const GAME_LEVELS_PER_BUCKET = 60;
 
 function gameSectorPoolForLevel(level) {
   const buckets = [
@@ -23,6 +24,79 @@ function gameSectorPoolForLevel(level) {
     return VOCAB_SECTORS.map(s => s.id);
   }
   return buckets[bucketIndex];
+}
+
+/* ---------- Anti-doublon : chaque mot n'est retesté qu'une fois
+   TOUS les autres mots du même palier de difficulté épuisés. ----------
+   On construit, pour chaque palier de 60 niveaux, une séquence de mots
+   déterministe (mêlée mais reproductible via une seed), obtenue en
+   enchaînant des mélanges indépendants du pool tant qu'il faut pour
+   couvrir les 480 questions du palier (60 niveaux × 8). Chaque niveau
+   pioche 8 mots consécutifs dans cette séquence : aucun mot ne revient
+   avant que tout le pool du palier ait été utilisé une première fois. */
+
+function hashStringToSeed(s) {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) h = (Math.imul(31, h) + s.charCodeAt(i)) | 0;
+  return h >>> 0;
+}
+
+function seededShuffle(arr, seed) {
+  let state = seed >>> 0;
+  function rand() {
+    state = (state + 0x6d2b79f5) | 0;
+    let t = Math.imul(state ^ (state >>> 15), 1 | state);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  }
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(rand() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+const _gameBucketSequenceCache = {};
+
+function gameBucketSequence(bucketIndex, sectorIds) {
+  if (_gameBucketSequenceCache[bucketIndex]) return _gameBucketSequenceCache[bucketIndex];
+  const pool = VOCAB_WORDS.filter(w => sectorIds.includes(w.sector));
+  const usablePool = pool.length >= GAME_QUESTIONS_PER_LEVEL ? pool : VOCAB_WORDS;
+  const totalSlots = GAME_LEVELS_PER_BUCKET * GAME_QUESTIONS_PER_LEVEL;
+  const baseSeed = hashStringToSeed(`bucket-${bucketIndex}-${sectorIds.slice().sort().join(",")}`);
+  const sequence = [];
+  let lap = 0;
+  while (sequence.length < totalSlots) {
+    sequence.push(...seededShuffle(usablePool, baseSeed + lap * 104729));
+    lap++;
+  }
+  const result = sequence.slice(0, totalSlots);
+  _gameBucketSequenceCache[bucketIndex] = result;
+  return result;
+}
+
+function gameWordsForLevel(level) {
+  const sectorIds = gameSectorPoolForLevel(level);
+  const bucketIndex = Math.min(4, Math.floor((level - 1) / GAME_LEVELS_PER_BUCKET));
+  const sequence = gameBucketSequence(bucketIndex, sectorIds);
+  const levelWithinBucket = (level - 1) % GAME_LEVELS_PER_BUCKET;
+  const startIdx = levelWithinBucket * GAME_QUESTIONS_PER_LEVEL;
+
+  const picked = [];
+  const seenIds = new Set();
+  let idx = startIdx;
+  let safety = 0;
+  while (picked.length < GAME_QUESTIONS_PER_LEVEL && safety < sequence.length * 2) {
+    const w = sequence[idx % sequence.length];
+    if (!seenIds.has(w.id)) {
+      seenIds.add(w.id);
+      picked.push(w);
+    }
+    idx++;
+    safety++;
+  }
+  return picked;
 }
 
 function gamePickExerciseType(level) {
@@ -78,7 +152,7 @@ function generateGameLevel(level) {
   let pool = VOCAB_WORDS.filter(w => sectorIds.includes(w.sector));
   if (pool.length < GAME_QUESTIONS_PER_LEVEL + 3) pool = VOCAB_WORDS;
 
-  const chosen = shuffle(pool).slice(0, GAME_QUESTIONS_PER_LEVEL);
+  const chosen = gameWordsForLevel(level);
   const questions = chosen.map(w => gameBuildQuestion(w, pool, level));
 
   return { level, questions };
