@@ -1,0 +1,553 @@
+/* ============================================================
+   LEARN ME — Programme avancé (partie C)
+   Chapitres 16 à 19 — expressions, médias, nuances stylistiques
+   et synthèse finale de niveau C2.
+   ============================================================ */
+
+/* ============================================================
+   CHAPITRE 16 — EXPRESSIONS & PROVERBES (C1)
+   ============================================================ */
+
+const u_ch16_1 = {
+  id: "ch16-u1", chapterId: "ch16", title: "Idiomes du quotidien (avancé)", icon: "🗨️",
+  desc: "Expressions idiomatiques courantes en anglais natif",
+  lessons: {
+    easy: [
+      qcm("« Break a leg » se dit pour...", ["Se blesser à la jambe", "Souhaiter bonne chance avant un spectacle", "Dire au revoir", "Exprimer la colère"], 1),
+      qcm("« Spill the beans » signifie...", ["Cuisiner des haricots", "Révéler un secret", "Renverser un verre", "Faire les courses"], 1),
+      fillEx("The ball is in your ___. (à toi de jouer)", "court"),
+      qcm("« Call it a day » signifie...", ["Nommer la journée", "Arrêter le travail pour la journée", "Fêter un anniversaire", "Prévoir le temps"], 1),
+      matchPairs([["break a leg", "bonne chance"], ["spill the beans", "vendre la mèche"], ["call it a day", "arrêter pour la journée"], ["hit the sack", "aller se coucher"], ["on the same page", "d'accord"], ["cut corners", "bâcler"]]),
+    ],
+    medium: [
+      fillEx("I think we're finally on the same ___. (d'accord)", "page"),
+      qcm("« Beat around the bush » signifie...", ["Aller droit au but", "Tourner autour du pot", "Faire du jardinage", "Se dépêcher"], 1),
+      ordEx(["Let's", "not", "beat", "around", "the", "bush", "."]),
+      trEx("Traduis : Arrête de me faire marcher.", "Stop pulling my leg", ["Don't pull my leg"]),
+      qcm("« See eye to eye » signifie...", ["Se disputer", "Être d'accord", "Se regarder dans le miroir", "S'ignorer"], 1),
+      lisEx("We finally see eye to eye on this project", "Qu'as-tu entendu ?", ["We finally see eye to eye on this project", "We finally disagree on this project", "We never see eye to eye", "We ignore this project"], 0),
+    ],
+    hard: [
+      trEx("Traduis : Il a fini par vendre la mèche pendant la réunion.", "He ended up spilling the beans during the meeting"),
+      fillEx("Every cloud has a silver ___. (après la pluie, le beau temps)", "lining"),
+      ordEx(["Don't", "judge", "a", "book", "by", "its", "cover", "."]),
+      qcm("« By the skin of your teeth » signifie...", ["Facilement", "De justesse", "Jamais", "Avec des dents blanches"], 1),
+      trEx("Traduis : C'était un mal pour un bien.", "It was a blessing in disguise"),
+      qcm("« Get a taste of your own medicine » signifie...", ["Prendre un médicament", "Récolter ce qu'on a semé", "Cuisiner", "Se soigner"], 1),
+    ],
+  },
+  quiz: [
+    qcm("« Break a leg » →", ["Se blesser", "Bonne chance", "Au revoir", "Colère"], 1),
+    qcm("« Spill the beans » →", ["Cuisiner", "Révéler un secret", "Renverser", "Courses"], 1),
+    qcm("« Call it a day » →", ["Nommer le jour", "Arrêter pour la journée", "Fêter", "Météo"], 1),
+    qcm("« Beat around the bush » →", ["Aller droit au but", "Tourner autour du pot", "Jardiner", "Se dépêcher"], 1),
+    qcm("« See eye to eye » →", ["Se disputer", "Être d'accord", "Miroir", "Ignorer"], 1),
+    qcm("« By the skin of your teeth » →", ["Facilement", "De justesse", "Jamais", "Dents blanches"], 1),
+    qcm("« Every cloud has a silver lining » →", ["Après la pluie le beau temps", "Il va pleuvoir", "Les nuages sont gris", "Aucun espoir"], 0),
+    qcm("« Get a taste of your own medicine » →", ["Prendre un médicament", "Récolter ce qu'on a semé", "Cuisiner", "Se soigner"], 1),
+    fillEx("The ball is in your ___.", "court"),
+    fillEx("I think we're on the same ___.", "page"),
+    fillEx("Every cloud has a silver ___.", "lining"),
+    fillEx("Don't ___ a book by its cover. (juger)", "judge"),
+    ordEx(["Let's", "not", "beat", "around", "the", "bush", "."]),
+    ordEx(["Don't", "judge", "a", "book", "by", "its", "cover", "."]),
+    ordEx(["We", "finally", "see", "eye", "to", "eye", "."]),
+    trEx("Traduis : Ne me fais pas tourner en bourrique.", "Stop pulling my leg", ["Don't pull my leg"]),
+    trEx("Traduis : Il a fini par vendre la mèche.", "He ended up spilling the beans"),
+    trEx("Traduis : C'était un mal pour un bien.", "It was a blessing in disguise"),
+    qcm("« Once bitten, twice shy » →", ["Chat échaudé craint l'eau froide", "Deux fois plus fort", "Jamais deux sans trois", "Qui ne risque rien n'a rien"], 0),
+    lisEx("We finally see eye to eye on this project", "Qu'as-tu entendu ?", ["We finally see eye to eye on this project", "We finally disagree on this project", "We never see eye to eye", "We ignore this project"], 0),
+  ],
+};
+
+const u_ch16_2 = {
+  id: "ch16-u2", chapterId: "ch16", title: "Proverbes et sagesse populaire", icon: "📜",
+  desc: "Proverbes anglais courants et leur sens",
+  lessons: {
+    easy: [
+      qcm("« Practice makes perfect » signifie...", ["C'est en forgeant qu'on devient forgeron", "La pratique est inutile", "Personne n'est parfait", "Il faut se reposer"], 0),
+      qcm("« Better late than never » signifie...", ["Il ne faut jamais être en retard", "Mieux vaut tard que jamais", "Le temps c'est de l'argent", "Rien ne sert de courir"], 1),
+      fillEx("Actions speak louder than ___. (les mots)", "words"),
+      qcm("« Easier said than done » signifie...", ["Plus facile à faire qu'à dire", "Plus facile à dire qu'à faire", "Impossible à faire", "Facile pour tout le monde"], 1),
+      matchPairs([["practice makes perfect", "c'est en forgeant qu'on devient forgeron"], ["better late than never", "mieux vaut tard que jamais"], ["actions speak louder than words", "les actes comptent plus que les mots"], ["easier said than done", "plus facile à dire qu'à faire"], ["birds of a feather flock together", "qui se ressemble s'assemble"], ["when in Rome...", "à Rome, fais comme les Romains"]]),
+    ],
+    medium: [
+      fillEx("Birds of a feather flock ___. (ensemble)", "together"),
+      qcm("« The grass is always greener on the other side » signifie...", ["On envie toujours ce que les autres ont", "L'herbe pousse mieux ailleurs", "Il faut arroser son jardin", "Le vert est une belle couleur"], 0),
+      ordEx(["The", "grass", "is", "always", "greener", "on", "the", "other", "side", "."]),
+      trEx("Traduis : Qui se ressemble s'assemble.", "Birds of a feather flock together"),
+      qcm("« Absence makes the heart grow fonder » signifie...", ["L'absence tue les sentiments", "Loin des yeux, près du cœur", "Il faut être toujours ensemble", "On oublie vite"], 1),
+      lisEx("When in Rome, do as the Romans do", "Qu'as-tu entendu ?", ["When in Rome, do as the Romans do", "When in Paris, do as you like", "When abroad, stay home", "When in Rome, ignore the locals"], 0),
+    ],
+    hard: [
+      trEx("Traduis : L'herbe est toujours plus verte ailleurs.", "The grass is always greener on the other side"),
+      fillEx("A leopard can't change its ___. (nature profonde)", "spots"),
+      ordEx(["Actions", "speak", "louder", "than", "words", "."]),
+      qcm("« All bark and no bite » décrit quelqu'un qui...", ["Menace mais n'agit jamais", "Mord souvent", "Aboie et mord", "Ne parle jamais"], 0),
+      trEx("Traduis : On ne change pas sa nature profonde.", "A leopard can't change its spots"),
+      qcm("« Beat a dead horse » signifie...", ["Insister inutilement sur un sujet clos", "Battre un animal", "Courir vite", "Gagner une course"], 0),
+    ],
+  },
+  quiz: [
+    qcm("« Practice makes perfect » →", ["C'est en forgeant qu'on devient forgeron", "Inutile de pratiquer", "Personne n'est parfait", "Il faut se reposer"], 0),
+    qcm("« Better late than never » →", ["Jamais en retard", "Mieux vaut tard que jamais", "Le temps c'est de l'argent", "Rien ne sert de courir"], 1),
+    qcm("« Easier said than done » →", ["Plus facile à faire", "Plus facile à dire qu'à faire", "Impossible", "Facile pour tous"], 1),
+    qcm("« The grass is always greener » →", ["On envie ce que les autres ont", "L'herbe pousse mieux ailleurs", "Il faut arroser", "Le vert est beau"], 0),
+    qcm("« Absence makes the heart grow fonder » →", ["L'absence tue les sentiments", "Loin des yeux, près du cœur", "Il faut être ensemble", "On oublie vite"], 1),
+    qcm("« A leopard can't change its spots » →", ["On ne change pas sa nature", "Les léopards sont rapides", "Il faut changer", "Les taches partent au lavage"], 0),
+    qcm("« All bark and no bite » →", ["Menace sans agir", "Mord souvent", "Aboie et mord", "Ne parle jamais"], 0),
+    qcm("« Beat a dead horse » →", ["Insister inutilement", "Battre un animal", "Courir vite", "Gagner"], 0),
+    fillEx("Actions speak louder than ___.", "words"),
+    fillEx("Birds of a feather flock ___.", "together"),
+    fillEx("A leopard can't change its ___.", "spots"),
+    fillEx("Practice makes ___.", "perfect"),
+    ordEx(["The", "grass", "is", "always", "greener", "on", "the", "other", "side", "."]),
+    ordEx(["Actions", "speak", "louder", "than", "words", "."]),
+    ordEx(["Birds", "of", "a", "feather", "flock", "together", "."]),
+    trEx("Traduis : Qui se ressemble s'assemble.", "Birds of a feather flock together"),
+    trEx("Traduis : L'herbe est toujours plus verte ailleurs.", "The grass is always greener on the other side"),
+    trEx("Traduis : On ne change pas sa nature profonde.", "A leopard can't change its spots"),
+    qcm("« When in Rome, do as the Romans do » signifie...", ["Il faut s'adapter aux usages locaux", "Il faut visiter Rome", "Rome est une belle ville", "Les Romains ont raison"], 0),
+    lisEx("When in Rome, do as the Romans do", "Qu'as-tu entendu ?", ["When in Rome, do as the Romans do", "When in Paris, do as you like", "When abroad, stay home", "When in Rome, ignore the locals"], 0),
+  ],
+};
+
+/* ============================================================
+   CHAPITRE 17 — ANGLAIS DES MÉDIAS & SUBTILITÉS (C1-C2)
+   ============================================================ */
+
+const u_ch17_1 = {
+  id: "ch17-u1", chapterId: "ch17", title: "Comprendre les gros titres", icon: "📰",
+  desc: "Le style journalistique condensé de la presse anglophone",
+  lessons: {
+    easy: [
+      qcm("Dans les titres de presse, « to slam » signifie...", ["Fermer une porte", "Critiquer vivement", "Applaudir", "Ignorer"], 1),
+      qcm("« to axe » (dans un titre) signifie...", ["Couper du bois", "Supprimer/annuler", "Réparer", "Célébrer"], 1),
+      fillEx("Government ___ (vow) to cut taxes next year. (promettre)", "vows"),
+      qcm("« to probe » dans un titre signifie...", ["Enquêter sur", "Ignorer", "Féliciter", "Vendre"], 0),
+      matchPairs([["slam", "critiquer vivement"], ["axe", "supprimer"], ["vow", "promettre"], ["probe", "enquêter"], ["spark", "déclencher"], ["blast", "critiquer sévèrement"]]),
+    ],
+    medium: [
+      fillEx("New study ___ (spark) debate over social media use. (déclenche)", "sparks"),
+      qcm("Les titres omettent souvent...", ["Les noms propres", "Les verbes être/avoir et les articles", "Les chiffres", "Les questions"], 1),
+      ordEx(["Minister", "under", "fire", "over", "new", "policy", "."]),
+      trEx("Traduis un titre : Le gouvernement critiqué pour sa nouvelle politique.", "Government slammed over new policy", ["Government under fire over new policy"]),
+      qcm("« Under fire » dans un titre signifie...", ["Être en feu", "Être critiqué", "Être promu", "Être en vacances"], 1),
+      lisEx("City council slams new housing plan", "Qu'as-tu entendu ?", ["City council slams new housing plan", "City council approves new housing plan", "City council ignores new housing plan", "City council builds new housing"], 0),
+    ],
+    hard: [
+      trEx("Traduis un titre : Une étude choc déclenche un débat national.", "Shocking study sparks national debate"),
+      fillEx("Company ___ (probe) after data leak scandal. (sous enquête)", "probed"),
+      ordEx(["Thousands", "march", "against", "new", "law", "."]),
+      qcm("« To eye » dans un titre (ex: 'firm eyes new market') signifie...", ["Regarder avec les yeux", "Envisager/viser", "Ignorer complètement", "Fermer les yeux sur"], 1),
+      trEx("Traduis un titre : L'entreprise vise le marché asiatique.", "Firm eyes Asian market"),
+      qcm("Pourquoi les titres utilisent-ils un style si condensé ?", ["Pour économiser l'espace et capter l'attention rapidement", "Par erreur grammaticale", "Parce que c'est plus poli", "Pour être plus formel"], 0),
+    ],
+  },
+  quiz: [
+    qcm("« Slam » →", ["Fermer", "Critiquer vivement", "Applaudir", "Ignorer"], 1),
+    qcm("« Axe » →", ["Couper du bois", "Supprimer", "Réparer", "Célébrer"], 1),
+    qcm("« Vow » →", ["Promettre", "Refuser", "Oublier", "Vendre"], 0),
+    qcm("« Probe » →", ["Enquêter", "Ignorer", "Féliciter", "Vendre"], 0),
+    qcm("« Spark » →", ["Déclencher", "Éteindre", "Ignorer", "Réparer"], 0),
+    qcm("« Blast » →", ["Complimenter", "Critiquer sévèrement", "Ignorer", "Célébrer"], 1),
+    qcm("« Under fire » →", ["En feu", "Critiqué", "Promu", "En vacances"], 1),
+    qcm("« To eye » (titre) →", ["Regarder", "Envisager/viser", "Ignorer", "Fermer les yeux"], 1),
+    fillEx("Government ___ (vow) to cut taxes.", "vows"),
+    fillEx("New study ___ (spark) debate.", "sparks"),
+    fillEx("Company ___ (probe) after scandal.", "probed"),
+    fillEx("Minister under ___ over policy. (critique)", "fire"),
+    ordEx(["Minister", "under", "fire", "over", "new", "policy", "."]),
+    ordEx(["Thousands", "march", "against", "new", "law", "."]),
+    ordEx(["Firm", "eyes", "Asian", "market", "."]),
+    trEx("Traduis un titre : Le gouvernement critiqué pour sa nouvelle politique.", "Government slammed over new policy", ["Government under fire over new policy"]),
+    trEx("Traduis un titre : Une étude choc déclenche un débat national.", "Shocking study sparks national debate"),
+    trEx("Traduis un titre : L'entreprise vise le marché asiatique.", "Firm eyes Asian market"),
+    qcm("Pourquoi les titres omettent-ils souvent « is/are » et les articles ?", ["Pour économiser l'espace et l'impact", "Erreur grammaticale", "Par politesse", "Style plus formel"], 0),
+    lisEx("City council slams new housing plan", "Qu'as-tu entendu ?", ["City council slams new housing plan", "City council approves new housing plan", "City council ignores new housing plan", "City council builds new housing"], 0),
+  ],
+};
+
+const u_ch17_2 = {
+  id: "ch17-u2", chapterId: "ch17", title: "Collocations avancées & faux-amis", icon: "🎯",
+  desc: "Pièges fréquents entre le français et l'anglais",
+  lessons: {
+    easy: [
+      qcm("« Actually » signifie...", ["Actuellement", "En fait", "Éventuellement", "Actualité"], 1),
+      qcm("« Library » signifie...", ["Librairie", "Bibliothèque", "Liberté", "Livre"], 1),
+      fillEx("I will ___ (attend) the meeting tomorrow. (assister à)", "attend"),
+      qcm("« Sensible » signifie...", ["Sensible", "Raisonnable", "Sensationnel", "Fragile"], 1),
+      matchPairs([["actually", "en fait"], ["library", "bibliothèque"], ["attend", "assister à"], ["sensible", "raisonnable"], ["eventually", "finalement"], ["delay", "retard"]]),
+    ],
+    medium: [
+      fillEx("She ___ (achieve) her goal after years of work. (a réalisé)", "achieved"),
+      qcm("« Deception » signifie...", ["Déception", "Tromperie", "Décès", "Décision"], 1),
+      ordEx(["I", "was", "surprised", "by", "his", "deception", "."]),
+      trEx("Traduis : Il faut acheter du pain à la boulangerie.", "We need to buy bread at the bakery"),
+      qcm("« A coin » signifie...", ["Un coin de rue", "Une pièce de monnaie", "Un coing (fruit)", "Une pièce de théâtre"], 1),
+      lisEx("The flight was delayed by two hours", "Qu'as-tu entendu ?", ["The flight was delayed by two hours", "The flight was cancelled", "The flight arrived early", "The flight was full"], 0),
+    ],
+    hard: [
+      trEx("Traduis : En fait, je pensais qu'il était bibliothécaire, pas libraire.", "Actually, I thought he was a librarian, not a bookseller"),
+      fillEx("« Formidable » in English often means something ___. (redoutable)", "daunting", ["impressive but intimidating"]),
+      ordEx(["This", "house", "has", "been", "inhabited", "for", "centuries", "."]),
+      qcm("« Inhabited » signifie...", ["Inhabité", "Habité", "Impossible à habiter", "Détruit"], 1),
+      trEx("Traduis : Cette maison est habitée depuis des siècles.", "This house has been inhabited for centuries"),
+      qcm("Collocation correcte : « to ___ a decision »", ["do", "make", "take", "have"], 1),
+    ],
+  },
+  quiz: [
+    qcm("« Actually » →", ["Actuellement", "En fait", "Éventuellement", "Actualité"], 1),
+    qcm("« Library » →", ["Librairie", "Bibliothèque", "Liberté", "Livre"], 1),
+    qcm("« Sensible » →", ["Sensible", "Raisonnable", "Sensationnel", "Fragile"], 1),
+    qcm("« Eventually » →", ["Éventuellement", "Finalement", "Événement", "Rarement"], 1),
+    qcm("« Deception » →", ["Déception", "Tromperie", "Décès", "Décision"], 1),
+    qcm("« Coin » →", ["Coin de rue", "Pièce de monnaie", "Coing", "Pièce de théâtre"], 1),
+    qcm("« Delay » →", ["Délai (durée fixée)", "Retard", "Délice", "Délicat"], 1),
+    qcm("« Inhabited » →", ["Inhabité", "Habité", "Détruit", "Impossible à habiter"], 1),
+    fillEx("I will ___ (attend) the meeting.", "attend"),
+    fillEx("She ___ (achieve) her goal.", "achieved"),
+    fillEx("The flight was ___ (delay) by two hours.", "delayed"),
+    fillEx("Collocation : to ___ a decision. (prendre)", "make"),
+    ordEx(["I", "was", "surprised", "by", "his", "deception", "."]),
+    ordEx(["This", "house", "has", "been", "inhabited", "for", "centuries", "."]),
+    ordEx(["We", "need", "to", "buy", "bread", "at", "the", "bakery", "."]),
+    trEx("Traduis : En fait, je pensais qu'il était bibliothécaire.", "Actually, I thought he was a librarian"),
+    trEx("Traduis : Cette maison est habitée depuis des siècles.", "This house has been inhabited for centuries"),
+    trEx("Traduis : Il faut acheter du pain à la boulangerie.", "We need to buy bread at the bakery"),
+    qcm("Collocation correcte : « to ___ an exam » (réussir)", ["do", "pass", "make", "take"], 1),
+    lisEx("The flight was delayed by two hours", "Qu'as-tu entendu ?", ["The flight was delayed by two hours", "The flight was cancelled", "The flight arrived early", "The flight was full"], 0),
+  ],
+};
+
+/* ============================================================
+   CHAPITRE 18 — NUANCES STYLISTIQUES (C2)
+   ============================================================ */
+
+const u_ch18_1 = {
+  id: "ch18-u1", chapterId: "ch18", title: "Emphase & cleft sentences", icon: "✨",
+  desc: "Structures d'emphase et understatement",
+  lessons: {
+    easy: [
+      qcm("« It was John who broke the window » est une structure...", ["Cleft sentence (emphase)", "Voix passive", "Discours rapporté", "Conditionnel"], 0),
+      qcm("« What I need is a holiday » met l'emphase sur...", ["John", "Une pause/vacances", "Le passé", "Une question"], 1),
+      fillEx("It ___ (be) Sarah who solved the problem. (c'est... qui)", "was"),
+      qcm("« Not bad at all » (understatement) après un grand succès signifie souvent...", ["C'était vraiment excellent (litote)", "C'était mauvais", "C'était moyen", "Aucune opinion"], 0),
+      matchPairs([["cleft sentence", "phrase clivée (emphase)"], ["understatement", "litote/euphémisme"], ["emphasis", "emphase"], ["What I need is...", "Ce dont j'ai besoin c'est..."], ["It was...who/that", "C'est...qui/que"], ["rhetoric", "rhétorique"]]),
+    ],
+    medium: [
+      fillEx("What surprised me ___ (be) his honesty. (c'était)", "was"),
+      qcm("« It's not the best restaurant in town » dit avec un sourire signifie souvent...", ["C'est un restaurant correct", "C'est vraiment le meilleur restaurant (litote)", "C'est un mauvais restaurant", "Aucune opinion"], 1),
+      ordEx(["It", "was", "the", "teacher", "who", "noticed", "the", "mistake", "."]),
+      trEx("Traduis (avec emphase) : C'est cette décision qui a tout changé.", "It was this decision that changed everything"),
+      qcm("« What I love about this city is its energy » met l'accent sur...", ["La ville en général", "Son énergie spécifiquement", "Le passé", "Une critique"], 1),
+      lisEx("It was Sarah who solved the problem", "Qu'as-tu entendu ?", ["It was Sarah who solved the problem", "Sarah solved the problem yesterday", "It wasn't Sarah who solved it", "Sarah couldn't solve the problem"], 0),
+    ],
+    hard: [
+      trEx("Traduis (cleft sentence) : Ce dont j'ai vraiment besoin, c'est de vacances.", "What I really need is a holiday"),
+      fillEx("« Quite good », dit d'un ton neutre après une performance exceptionnelle, est un exemple de ___. (litote)", "understatement"),
+      ordEx(["What", "I", "admire", "most", "is", "her", "courage", "."]),
+      qcm("Pourquoi les anglophones utilisent-ils l'understatement ?", ["Pour exagérer les faits", "Par pudeur ou politesse, souvent avec ironie", "Par manque de vocabulaire", "Pour être plus précis"], 1),
+      trEx("Traduis : C'est justement ce que je voulais dire.", "That's exactly what I meant"),
+      qcm("« It is high time we left » utilise quelle structure emphatique ?", ["It is + high time + prétérit", "Voix passive", "Discours rapporté", "Futur simple"], 0),
+    ],
+  },
+  quiz: [
+    qcm("« It was John who broke the window » est...", ["Cleft sentence", "Passive", "Discours rapporté", "Conditionnel"], 0),
+    qcm("« What I need is a holiday » met l'emphase sur...", ["John", "Vacances", "Passé", "Question"], 1),
+    qcm("« Not bad at all » après un succès signifie souvent...", ["Excellent (litote)", "Mauvais", "Moyen", "Aucune opinion"], 0),
+    qcm("« It's not the best restaurant » avec un sourire signifie...", ["Correct", "Le meilleur (litote)", "Mauvais", "Sans opinion"], 1),
+    qcm("« What I love about this city is its energy » met l'accent sur...", ["La ville en général", "Son énergie", "Le passé", "Une critique"], 1),
+    qcm("Pourquoi utiliser l'understatement ?", ["Exagérer", "Pudeur/politesse, souvent ironique", "Manque de vocabulaire", "Précision"], 1),
+    qcm("« It is high time we left » utilise...", ["It is + high time + prétérit", "Passive", "Discours rapporté", "Futur"], 0),
+    fillEx("It ___ (be) Sarah who solved the problem.", "was"),
+    fillEx("What surprised me ___ (be) his honesty.", "was"),
+    fillEx("« Quite good » dit d'un ton neutre est un exemple de ___.", "understatement"),
+    ordEx(["It", "was", "the", "teacher", "who", "noticed", "the", "mistake", "."]),
+    ordEx(["What", "I", "admire", "most", "is", "her", "courage", "."]),
+    ordEx(["It", "is", "high", "time", "we", "left", "."]),
+    trEx("Traduis (emphase) : C'est cette décision qui a tout changé.", "It was this decision that changed everything"),
+    trEx("Traduis (cleft) : Ce dont j'ai vraiment besoin, c'est de vacances.", "What I really need is a holiday"),
+    trEx("Traduis : C'est justement ce que je voulais dire.", "That's exactly what I meant"),
+    qcm("Quelle phrase est une cleft sentence correcte ?", ["What I need is rest", "I need what is rest", "Rest I need what", "Is what I need rest"], 0),
+    fillEx("What I admire most ___ (be) her patience.", "is"),
+    qcm("« It was only later that I understood » met l'accent sur...", ["Le moment où la compréhension est venue", "La personne", "Le lieu", "La raison"], 0),
+    lisEx("It was Sarah who solved the problem", "Qu'as-tu entendu ?", ["It was Sarah who solved the problem", "Sarah solved the problem yesterday", "It wasn't Sarah who solved it", "Sarah couldn't solve the problem"], 0),
+  ],
+};
+
+const u_ch18_2 = {
+  id: "ch18-u2", chapterId: "ch18", title: "Registres littéraires & rhétorique", icon: "🖋️",
+  desc: "Figures de style et discours persuasif",
+  lessons: {
+    easy: [
+      qcm("Une « rhetorical question » sert à...", ["Obtenir une vraie réponse", "Faire réfléchir sans attendre de réponse", "Poser une question administrative", "Insulter"], 1),
+      qcm("« Repetition for effect » sert à...", ["Renforcer un message", "Économiser des mots", "Éviter la répétition", "Poser une question"], 0),
+      fillEx("Isn't it obvious ___ (that) we need change? (question rhétorique)", "that"),
+      qcm("Une « analogy » sert à...", ["Comparer pour clarifier une idée", "Contredire", "Poser une question", "Résumer"], 0),
+      matchPairs([["rhetorical question", "question rhétorique"], ["repetition", "répétition (effet de style)"], ["analogy", "analogie"], ["persuasive", "persuasif"], ["tone", "ton"], ["register", "registre"]]),
+    ],
+    medium: [
+      fillEx("The speaker used ___ (repetition) to emphasize her point. (répétition)", "repetition"),
+      qcm("« Alliteration » est...", ["La répétition d'un son en début de mots", "Une question sans réponse", "Une comparaison", "Un mensonge"], 0),
+      ordEx(["We", "shall", "fight", "on", "the", "beaches", "."]),
+      trEx("Traduis : Le ton de ce discours était clairement persuasif.", "The tone of this speech was clearly persuasive"),
+      qcm("« Hyperbole » signifie...", ["Une exagération volontaire", "Une sous-estimation", "Un fait exact", "Une question"], 0),
+      lisEx("The speaker used repetition to emphasize her point", "Qu'as-tu entendu ?", ["The speaker used repetition to emphasize her point", "The speaker avoided repetition entirely", "The speaker never made a point", "The speaker was very brief"], 0),
+    ],
+    hard: [
+      trEx("Traduis : Cette hyperbole a renforcé l'impact émotionnel du discours.", "This hyperbole strengthened the emotional impact of the speech"),
+      fillEx("« I have a dream » is a famous example of persuasive ___. (rhétorique)", "rhetoric"),
+      ordEx(["Ask", "not", "what", "your", "country", "can", "do", "for", "you", "."]),
+      qcm("Pourquoi les orateurs utilisent-ils des questions rhétoriques ?", ["Pour engager l'auditoire sans attendre de réponse", "Pour tester la culture générale", "Par manque d'idées", "Pour conclure un discours"], 0),
+      trEx("Traduis : Ce discours restera dans l'histoire pour son style rhétorique.", "This speech will go down in history for its rhetorical style"),
+      qcm("Le registre « formal literary » se caractérise par...", ["Un vocabulaire recherché et une syntaxe complexe", "Des abréviations et de l'argot", "Des phrases très courtes uniquement", "Aucune règle particulière"], 0),
+    ],
+  },
+  quiz: [
+    qcm("Une « rhetorical question » sert à...", ["Obtenir une réponse", "Faire réfléchir sans réponse attendue", "Question administrative", "Insulter"], 1),
+    qcm("« Repetition for effect » sert à...", ["Renforcer un message", "Économiser des mots", "Éviter la répétition", "Poser une question"], 0),
+    qcm("Une « analogy » sert à...", ["Comparer pour clarifier", "Contredire", "Questionner", "Résumer"], 0),
+    qcm("« Alliteration » est...", ["Répétition d'un son en début de mots", "Question sans réponse", "Comparaison", "Mensonge"], 0),
+    qcm("« Hyperbole » signifie...", ["Exagération volontaire", "Sous-estimation", "Fait exact", "Question"], 0),
+    qcm("Pourquoi utiliser des questions rhétoriques ?", ["Engager l'auditoire sans réponse attendue", "Tester la culture générale", "Manque d'idées", "Conclure"], 0),
+    qcm("Le registre « formal literary » se caractérise par...", ["Vocabulaire recherché et syntaxe complexe", "Abréviations et argot", "Phrases très courtes", "Aucune règle"], 0),
+    fillEx("Isn't it obvious ___ we need change?", "that"),
+    fillEx("The speaker used ___ (repetition) to emphasize her point.", "repetition"),
+    fillEx("« I have a dream » is an example of persuasive ___.", "rhetoric"),
+    ordEx(["We", "shall", "fight", "on", "the", "beaches", "."]),
+    ordEx(["Ask", "not", "what", "your", "country", "can", "do", "for", "you", "."]),
+    ordEx(["The", "tone", "was", "clearly", "persuasive", "."]),
+    trEx("Traduis : Le ton de ce discours était clairement persuasif.", "The tone of this speech was clearly persuasive"),
+    trEx("Traduis : Cette hyperbole a renforcé l'impact émotionnel du discours.", "This hyperbole strengthened the emotional impact of the speech"),
+    trEx("Traduis : Ce discours restera dans l'histoire pour son style rhétorique.", "This speech will go down in history for its rhetorical style"),
+    qcm("« We shall fight on the beaches » (Churchill) utilise...", ["La répétition pour l'effet rhétorique", "Une question rhétorique", "Le discours rapporté", "La voix passive"], 0),
+    fillEx("Metaphors and ___ (analogies) make speeches more vivid.", "analogies", ["analogy"]),
+    qcm("« Tone » dans un discours désigne...", ["L'attitude/l'humeur exprimée", "La longueur du texte", "Le nombre de mots", "La police d'écriture"], 0),
+    lisEx("The speaker used repetition to emphasize her point", "Qu'as-tu entendu ?", ["The speaker used repetition to emphasize her point", "The speaker avoided repetition entirely", "The speaker never made a point", "The speaker was very brief"], 0),
+  ],
+};
+
+/* ============================================================
+   CHAPITRE 19 — MAÎTRISE TOTALE (C2)
+   ============================================================ */
+
+const u_ch19_1 = {
+  id: "ch19-u1", chapterId: "ch19", title: "Anglais des affaires international", icon: "🌐",
+  desc: "Négociation avancée à l'international",
+  lessons: {
+    easy: [
+      qcm("« To reach a win-win deal » signifie...", ["Un accord où tout le monde perd", "Un accord bénéfique pour toutes les parties", "Annuler la négociation", "Refuser de négocier"], 1),
+      qcm("« Common ground » en négociation signifie...", ["Un terrain vague", "Des points d'accord partagés", "Un désaccord total", "Un contrat signé"], 1),
+      fillEx("Let's find some ___ (common) ground before continuing. (points communs)", "common"),
+      qcm("« To make a concession » signifie...", ["Refuser tout compromis", "Faire une concession/céder sur un point", "Gagner sur tous les points", "Annuler l'accord"], 1),
+      matchPairs([["win-win", "gagnant-gagnant"], ["common ground", "terrain d'entente"], ["concession", "concession"], ["leverage", "levier/rapport de force"], ["stalemate", "impasse"], ["counteroffer", "contre-offre"]]),
+    ],
+    medium: [
+      fillEx("They reached a ___ (stalemate) after hours of talks. (impasse)", "stalemate"),
+      qcm("« To have leverage » signifie...", ["Avoir un avantage/rapport de force", "Ne rien avoir à offrir", "Perdre la négociation", "Être neutre"], 0),
+      ordEx(["We", "need", "to", "find", "some", "common", "ground", "."]),
+      trEx("Traduis : Ils ont fait une contre-offre plus avantageuse.", "They made a more advantageous counteroffer"),
+      qcm("« To sweeten the deal » signifie...", ["Rendre l'accord plus attractif", "Refuser l'accord", "Annuler la réunion", "Se disputer"], 0),
+      lisEx("We reached a win-win agreement after long negotiations", "Qu'as-tu entendu ?", ["We reached a win-win agreement after long negotiations", "We reached a stalemate after long negotiations", "We cancelled the negotiations", "We lost the negotiation"], 0),
+    ],
+    hard: [
+      trEx("Traduis : Nous devons sortir de cette impasse avant la fin de la semaine.", "We need to break this stalemate before the end of the week"),
+      fillEx("They decided to ___ (sweeten) the deal with an extra bonus. (rendre plus attractif)", "sweeten"),
+      ordEx(["They", "decided", "to", "sweeten", "the", "deal", "."]),
+      qcm("« To walk away from the table » en négociation signifie...", ["Continuer à négocier", "Se retirer de la négociation", "Signer immédiatement", "Faire une pause déjeuner"], 1),
+      trEx("Traduis : Ils ont utilisé leur position dominante comme levier de négociation.", "They used their dominant position as leverage"),
+      qcm("« Bottom line » en négociation désigne...", ["Le point essentiel/la limite minimale acceptable", "La dernière phrase du contrat", "Un synonyme d'échec", "Le prix le plus élevé"], 0),
+    ],
+  },
+  quiz: [
+    qcm("« Win-win deal » →", ["Tout le monde perd", "Bénéfique pour tous", "Annulation", "Refus"], 1),
+    qcm("« Common ground » →", ["Terrain vague", "Points d'accord partagés", "Désaccord total", "Contrat signé"], 1),
+    qcm("« Concession » →", ["Refuser tout", "Céder sur un point", "Gagner tout", "Annuler"], 1),
+    qcm("« Leverage » →", ["Avantage/rapport de force", "Rien à offrir", "Perdre", "Neutralité"], 0),
+    qcm("« Stalemate » →", ["Accord rapide", "Impasse", "Victoire totale", "Contre-offre"], 1),
+    qcm("« Sweeten the deal » →", ["Rendre plus attractif", "Refuser", "Annuler", "Se disputer"], 0),
+    qcm("« Walk away from the table » →", ["Continuer à négocier", "Se retirer de la négociation", "Signer", "Pause déjeuner"], 1),
+    qcm("« Bottom line » →", ["Point essentiel/limite minimale", "Dernière phrase du contrat", "Échec", "Prix le plus élevé"], 0),
+    fillEx("Let's find some ___ (common) ground.", "common"),
+    fillEx("They reached a ___ (stalemate) after hours of talks.", "stalemate"),
+    fillEx("They decided to ___ (sweeten) the deal.", "sweeten"),
+    fillEx("They used their position as ___ (leverage). (levier)", "leverage"),
+    ordEx(["We", "need", "to", "find", "some", "common", "ground", "."]),
+    ordEx(["They", "decided", "to", "sweeten", "the", "deal", "."]),
+    ordEx(["We", "reached", "a", "win-win", "agreement", "."]),
+    trEx("Traduis : Ils ont fait une contre-offre plus avantageuse.", "They made a more advantageous counteroffer"),
+    trEx("Traduis : Nous devons sortir de cette impasse avant la fin de la semaine.", "We need to break this stalemate before the end of the week"),
+    trEx("Traduis : Ils ont utilisé leur position dominante comme levier de négociation.", "They used their dominant position as leverage"),
+    qcm("« Counteroffer » signifie...", ["Contre-offre", "Offre initiale", "Refus total", "Accord final"], 0),
+    lisEx("We reached a win-win agreement after long negotiations", "Qu'as-tu entendu ?", ["We reached a win-win agreement after long negotiations", "We reached a stalemate after long negotiations", "We cancelled the negotiations", "We lost the negotiation"], 0),
+  ],
+};
+
+const u_ch19_2 = {
+  id: "ch19-u2", chapterId: "ch19", title: "Épreuve finale — Synthèse C2", icon: "🏅",
+  desc: "Révision globale : conditionnels, passive, discours rapporté, inversion, subjonctif, idiomes",
+  lessons: {
+    easy: [
+      qcm("« If I had known, I would have come » est un conditionnel de type...", ["1", "2", "3", "Zéro"], 2),
+      qcm("Voix passive de « They built this house in 1990 » :", ["This house built in 1990", "This house was built in 1990", "This house has built in 1990", "This house is building in 1990"], 1),
+      fillEx("She said she ___ (be) tired. (discours rapporté)", "was"),
+      qcm("« Never have I seen such courage » utilise...", ["L'inversion emphatique", "La voix passive", "Le conditionnel", "Le subjonctif"], 0),
+      matchPairs([["conditional type 3", "conditionnel passé irréel"], ["passive voice", "voix passive"], ["reported speech", "discours rapporté"], ["inversion", "inversion emphatique"], ["subjunctive", "subjonctif"], ["idiom", "expression idiomatique"]]),
+    ],
+    medium: [
+      fillEx("If I ___ (be) you, I would apologize immediately. (étais)", "were"),
+      qcm("« It is essential that he ___ on time » utilise le...", ["Subjonctif", "Indicatif", "Conditionnel", "Impératif"], 0),
+      ordEx(["Not", "only", "did", "she", "apologize", "but", "she", "also", "paid", "for", "the", "damage", "."]),
+      trEx("Traduis : Si j'avais su, je ne serais jamais venu.", "If I had known, I would never have come"),
+      qcm("« He asked if I had ever been to Japan » est du...", ["Discours direct", "Discours rapporté", "Conditionnel", "Subjonctif"], 1),
+      lisEx("Not only did she apologize, but she also paid for the damage", "Qu'as-tu entendu ?", ["Not only did she apologize, but she also paid for the damage", "She apologized but refused to pay", "She paid but never apologized", "She neither apologized nor paid"], 0),
+    ],
+    hard: [
+      trEx("Traduis (avec inversion) : À peine étais-je arrivé qu'il a commencé à pleuvoir.", "Hardly had I arrived when it started to rain"),
+      fillEx("If she had studied medicine, she ___ (be) a doctor now. (conditionnel mixte)", "would be"),
+      ordEx(["Were", "it", "not", "for", "your", "help", "I", "would", "have", "failed", "."]),
+      qcm("« Were it not for your help, I would have failed » est une structure...", ["Conditionnelle formelle avec inversion", "Discours rapporté", "Voix passive simple", "Question rhétorique"], 0),
+      trEx("Traduis : Il a fini par vendre la mèche, ce qui a tout gâché.", "He ended up spilling the beans, which ruined everything"),
+      qcm("Quelle phrase combine correctement voix passive ET discours rapporté ?", ["She said that the report had been finished", "She said that the report has finish", "She said the report finished it", "She said finished the report"], 0),
+    ],
+  },
+  quiz: [
+    qcm("« If I had known, I would have come » est un conditionnel de type...", ["1", "2", "3", "Zéro"], 2),
+    qcm("Voix passive de « They built this house » :", ["This house built", "This house was built", "This house has built", "This house is building"], 1),
+    qcm("« Never have I seen such courage » utilise...", ["Inversion emphatique", "Voix passive", "Conditionnel", "Subjonctif"], 0),
+    qcm("« It is essential that he ___ on time » utilise le...", ["Subjonctif", "Indicatif", "Conditionnel", "Impératif"], 0),
+    qcm("« He asked if I had ever been to Japan » est du...", ["Discours direct", "Discours rapporté", "Conditionnel", "Subjonctif"], 1),
+    qcm("« Were it not for your help... » est une structure...", ["Conditionnelle formelle avec inversion", "Discours rapporté", "Voix passive", "Question rhétorique"], 0),
+    qcm("Quelle phrase combine passive ET discours rapporté ?", ["She said that the report had been finished", "She said that the report has finish", "She said the report finished it", "She said finished the report"], 0),
+    fillEx("She said she ___ (be) tired.", "was"),
+    fillEx("If I ___ (be) you, I would apologize immediately.", "were"),
+    fillEx("If she had studied medicine, she ___ (be) a doctor now.", "would be"),
+    ordEx(["Not", "only", "did", "she", "apologize", "but", "she", "also", "paid", "for", "the", "damage", "."]),
+    ordEx(["Were", "it", "not", "for", "your", "help", "I", "would", "have", "failed", "."]),
+    ordEx(["Hardly", "had", "I", "arrived", "when", "it", "started", "to", "rain", "."]),
+    trEx("Traduis : Si j'avais su, je ne serais jamais venu.", "If I had known, I would never have come"),
+    trEx("Traduis (avec inversion) : À peine étais-je arrivé qu'il a commencé à pleuvoir.", "Hardly had I arrived when it started to rain"),
+    trEx("Traduis : Il a fini par vendre la mèche, ce qui a tout gâché.", "He ended up spilling the beans, which ruined everything"),
+    qcm("« Not only did she apologize, but she also paid » utilise...", ["Inversion après 'not only'", "Discours rapporté simple", "Voix passive", "Subjonctif"], 0),
+    fillEx("It is crucial that everyone ___ (be) informed. (subjonctif)", "be"),
+    qcm("Quelle expression signifie « à peine... que » ?", ["No sooner...than", "Even though", "As long as", "Provided that"], 0),
+    lisEx("Not only did she apologize, but she also paid for the damage", "Qu'as-tu entendu ?", ["Not only did she apologize, but she also paid for the damage", "She apologized but refused to pay", "She paid but never apologized", "She neither apologized nor paid"], 0),
+  ],
+};
+
+/* ============================================================
+   CHAPITRE 20 — ANGLAIS NATIF, AU-DELÀ DU C2
+   ============================================================ */
+
+const u_ch20_1 = {
+  id: "ch20-u1", chapterId: "ch20", title: "Anglais britannique, américain & international", icon: "🌍",
+  desc: "Différences de vocabulaire et de registre entre variantes de l'anglais",
+  lessons: {
+    easy: [
+      qcm("En anglais britannique, un « flat » correspond à...", ["Une maison individuelle", "Un appartement", "Un plat cuisiné", "Une voiture"], 1),
+      qcm("En anglais américain, « elevator » désigne...", ["Un escalier", "Un ascenseur", "Un balcon", "Un couloir"], 1),
+      fillEx("In British English, 'trousers' means the same as ___ in American English. (pantalon)", "pants"),
+      qcm("« Autumn » (UK) correspond à ___ en anglais américain.", ["Winter", "Fall", "Spring", "Summer"], 1),
+      matchPairs([["biscuit", "cookie (US)"], ["boot", "trunk (US)"], ["holiday", "vacation (US)"], ["queue", "line (US)"], ["chips", "fries (US)"], ["rubbish", "garbage (US)"]]),
+    ],
+    medium: [
+      fillEx("In the UK you take the ___ (underground) to get around London. (métro)", "underground"),
+      qcm("« Mate » (anglais britannique informel) signifie...", ["Ennemi", "Ami, copain", "Professeur", "Voisin"], 1),
+      ordEx(["I", "reckon", "it's", "going", "to", "rain", "."]),
+      trEx("Traduis en anglais britannique familier : Je pense qu'il va pleuvoir.", "I reckon it's going to rain"),
+      qcm("« Cheers » en anglais britannique peut aussi vouloir dire...", ["Seulement porter un toast", "Merci / au revoir informel", "Une insulte", "Une question"], 1),
+      lisEx("Fancy a cup of tea?", "Qu'as-tu entendu ?", ["Fancy a cup of tea?", "Do you want some coffee?", "Let's go for a walk", "See you tomorrow"], 0),
+    ],
+    hard: [
+      trEx("Traduis (registre britannique informel) : Ça te dit d'aller au cinéma ce soir ?", "Fancy going to the cinema tonight?", ["Do you fancy going to the cinema tonight?"]),
+      fillEx("An American would say 'sidewalk', while a British speaker says ___. (trottoir)", "pavement"),
+      ordEx(["Y'all", "should", "come", "over", "for", "dinner", "."]),
+      qcm("« Y'all » est une contraction typique de l'anglais...", ["Britannique standard", "Du sud des États-Unis", "Australien", "Canadien"], 1),
+      trEx("Traduis (anglais américain) : Peux-tu mettre tes bagages dans le coffre ?", "Can you put your luggage in the trunk?"),
+      qcm("Laquelle de ces paires N'EST PAS une différence purement orthographique UK/US ?", ["colour / color", "centre / center", "queue / line", "realise / realize"], 2),
+    ],
+  },
+  quiz: [
+    qcm("« Flat » (UK) →", ["Maison individuelle", "Appartement", "Plat cuisiné", "Voiture"], 1),
+    qcm("« Elevator » (US) →", ["Escalier", "Ascenseur", "Balcon", "Couloir"], 1),
+    qcm("« Autumn » (UK) →", ["Winter", "Fall", "Spring", "Summer"], 1),
+    qcm("« Mate » (UK informel) →", ["Ennemi", "Ami, copain", "Professeur", "Voisin"], 1),
+    qcm("« Cheers » (UK) peut aussi signifier...", ["Porter un toast uniquement", "Merci / au revoir informel", "Une insulte", "Une question"], 1),
+    qcm("« Y'all » vient de l'anglais...", ["Britannique standard", "Du sud des États-Unis", "Australien", "Canadien"], 1),
+    qcm("Laquelle N'EST PAS une différence orthographique UK/US ?", ["colour / color", "centre / center", "queue / line", "realise / realize"], 2),
+    fillEx("In British English, 'trousers' means the same as ___ in American English.", "pants"),
+    fillEx("In the UK you take the ___ (underground) to get around London.", "underground"),
+    fillEx("An American would say 'sidewalk', while a British speaker says ___.", "pavement"),
+    matchPairs([["biscuit", "cookie (US)"], ["boot", "trunk (US)"], ["holiday", "vacation (US)"], ["queue", "line (US)"], ["chips", "fries (US)"], ["rubbish", "garbage (US)"]]),
+    ordEx(["I", "reckon", "it's", "going", "to", "rain", "."]),
+    ordEx(["Y'all", "should", "come", "over", "for", "dinner", "."]),
+    trEx("Traduis (britannique familier) : Je pense qu'il va pleuvoir.", "I reckon it's going to rain"),
+    trEx("Traduis (britannique informel) : Ça te dit d'aller au cinéma ce soir ?", "Fancy going to the cinema tonight?", ["Do you fancy going to the cinema tonight?"]),
+    trEx("Traduis (américain) : Peux-tu mettre tes bagages dans le coffre ?", "Can you put your luggage in the trunk?"),
+    qcm("« Chips » désigne des frites en anglais...", ["Britannique", "Américain", "Australien uniquement", "Aucun des deux"], 0),
+    qcm("Comprendre les variantes régionales de l'anglais est utile pour...", ["Communiquer avec un public international", "Passer un examen uniquement", "Éviter de voyager", "Parler plus vite"], 0),
+    lisEx("Fancy a cup of tea?", "Qu'as-tu entendu ?", ["Fancy a cup of tea?", "Do you want some coffee?", "Let's go for a walk", "See you tomorrow"], 0),
+    qcm("« Rubbish » (UK) →", ["Nourriture", "Poubelle/déchets (garbage en US)", "Un vêtement", "Un jeu"], 1),
+  ],
+};
+
+const u_ch20_2 = {
+  id: "ch20-u2", chapterId: "ch20", title: "Rédaction experte & style soutenu", icon: "🖊️",
+  desc: "Connecteurs avancés, nuance et registre académique de haut niveau",
+  lessons: {
+    easy: [
+      qcm("Dans un essai académique formel, il vaut mieux éviter...", ["Les connecteurs logiques", "Les contractions (don't, can't)", "Les exemples concrets", "La ponctuation"], 1),
+      qcm("« Moreover » sert à...", ["Contredire", "Ajouter un argument supplémentaire", "Conclure", "Poser une question"], 1),
+      fillEx("___ these challenges, the project succeeded. (malgré)", "Notwithstanding"),
+      qcm("« Arguably » signifie...", ["Sans aucun doute", "On pourrait soutenir que / sans doute", "Jamais", "Toujours"], 1),
+      matchPairs([["moreover", "de plus"], ["notwithstanding", "malgré"], ["arguably", "on pourrait dire que"], ["henceforth", "désormais"], ["insofar as", "dans la mesure où"], ["nevertheless", "néanmoins"]]),
+    ],
+    medium: [
+      fillEx("The study's findings, ___ (insofar as) they are reliable, suggest a clear trend. (dans la mesure où)", "insofar as"),
+      qcm("La « nominalisation » (ex: 'to decide' → 'the decision') sert en anglais académique à...", ["Rendre le texte plus familier", "Rendre le style plus formel et impersonnel", "Simplifier la grammaire", "Éviter les noms"], 1),
+      ordEx(["It", "could", "be", "argued", "that", "the", "results", "are", "inconclusive", "."]),
+      trEx("Traduis en registre académique : On pourrait avancer que les résultats ne sont pas concluants.", "It could be argued that the results are inconclusive"),
+      qcm("Le « hedging » (atténuation) en anglais académique sert à...", ["Affirmer avec certitude absolue", "Nuancer une affirmation pour rester prudent", "Éviter tout argument", "Insulter poliment"], 1),
+      lisEx("It could be argued that further research is needed", "Qu'as-tu entendu ?", ["It could be argued that further research is needed", "Further research is definitely unnecessary", "No research has ever been done", "The research is complete"], 0),
+    ],
+    hard: [
+      trEx("Traduis en style soutenu : Il n'en demeure pas moins que ces données restent limitées.", "Nevertheless, this data remains limited", ["Nonetheless, this data remains limited"]),
+      fillEx("The committee's decision was, ___ (albeit) controversial, ultimately justified. (quoique)", "albeit"),
+      ordEx(["Such", "findings", "warrant", "further", "investigation", "."]),
+      qcm("« Such findings warrant further investigation » est un exemple de style...", ["Familier et oral", "Académique et formel", "Poétique", "Argotique"], 1),
+      trEx("Traduis en style soutenu : Ces résultats justifient une analyse plus approfondie.", "Such findings warrant further investigation", ["These results justify a more thorough analysis"]),
+      qcm("Quel connecteur convient le mieux pour introduire une nuance/restriction dans un essai ?", ["Also", "However", "And", "So"], 1),
+    ],
+  },
+  quiz: [
+    qcm("« Moreover » sert à...", ["Contredire", "Ajouter un argument", "Conclure", "Questionner"], 1),
+    qcm("« Arguably » signifie...", ["Sans aucun doute", "On pourrait soutenir que", "Jamais", "Toujours"], 1),
+    qcm("La nominalisation sert en anglais académique à...", ["Rendre le texte familier", "Rendre le style formel et impersonnel", "Simplifier la grammaire", "Éviter les noms"], 1),
+    qcm("Le « hedging » sert à...", ["Affirmer avec certitude absolue", "Nuancer une affirmation", "Éviter tout argument", "Insulter poliment"], 1),
+    qcm("« Such findings warrant further investigation » est un style...", ["Familier", "Académique et formel", "Poétique", "Argotique"], 1),
+    qcm("Meilleur connecteur pour une nuance/restriction ?", ["Also", "However", "And", "So"], 1),
+    qcm("Un essai formel évite généralement...", ["Les connecteurs logiques", "Les contractions", "Les exemples", "La ponctuation"], 1),
+    fillEx("___ these challenges, the project succeeded.", "Notwithstanding"),
+    fillEx("The study's findings, ___ (insofar as) they are reliable, suggest a trend.", "insofar as"),
+    fillEx("The committee's decision was, ___ (albeit) controversial, ultimately justified.", "albeit"),
+    matchPairs([["moreover", "de plus"], ["notwithstanding", "malgré"], ["arguably", "on pourrait dire que"], ["henceforth", "désormais"], ["insofar as", "dans la mesure où"], ["nevertheless", "néanmoins"]]),
+    ordEx(["It", "could", "be", "argued", "that", "the", "results", "are", "inconclusive", "."]),
+    ordEx(["Such", "findings", "warrant", "further", "investigation", "."]),
+    trEx("Traduis (registre académique) : On pourrait avancer que les résultats ne sont pas concluants.", "It could be argued that the results are inconclusive"),
+    trEx("Traduis en style soutenu : Il n'en demeure pas moins que ces données restent limitées.", "Nevertheless, this data remains limited", ["Nonetheless, this data remains limited"]),
+    trEx("Traduis en style soutenu : Ces résultats justifient une analyse plus approfondie.", "Such findings warrant further investigation", ["These results justify a more thorough analysis"]),
+    qcm("« Henceforth » signifie...", ["Auparavant", "Désormais", "Rarement", "Jamais"], 1),
+    qcm("Pourquoi utilise-t-on le hedging dans un article scientifique ?", ["Pour paraître plus intelligent", "Pour refléter honnêtement l'incertitude des résultats", "Pour éviter d'écrire", "Par tradition uniquement"], 1),
+    lisEx("It could be argued that further research is needed", "Qu'as-tu entendu ?", ["It could be argued that further research is needed", "Further research is definitely unnecessary", "No research has ever been done", "The research is complete"], 0),
+    qcm("« Notwithstanding » signifie...", ["Grâce à", "Malgré, néanmoins", "À cause de", "Depuis"], 1),
+  ],
+};
+
+CHAPTERS.push(
+  { id: "ch16", title: "Expressions & Proverbes", level: "C1", icon: "🗨️", locked: false, units: [u_ch16_1, u_ch16_2] },
+  { id: "ch17", title: "Anglais des médias & subtilités", level: "C1-C2", icon: "📰", locked: false, units: [u_ch17_1, u_ch17_2] },
+  { id: "ch18", title: "Nuances stylistiques", level: "C2", icon: "✨", locked: false, units: [u_ch18_1, u_ch18_2] },
+  { id: "ch19", title: "Maîtrise totale", level: "C2", icon: "🏅", locked: false, units: [u_ch19_1, u_ch19_2] },
+  { id: "ch20", title: "Anglais natif — Au-delà du C2", level: "C2+", icon: "🌟", locked: false, units: [u_ch20_1, u_ch20_2] }
+);

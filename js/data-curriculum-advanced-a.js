@@ -1,0 +1,553 @@
+/* ============================================================
+   LEARN ME — Programme avancé (partie A)
+   Chapitres 6 à 10 — niveaux B1 à C1
+   Utilise les fabriques d'exercices définies dans data-curriculum.js
+   ============================================================ */
+
+/* ============================================================
+   CHAPITRE 6 — CONDITIONNELS & HYPOTHÈSES (B1-B2)
+   ============================================================ */
+
+const u_ch6_1 = {
+  id: "ch6-u1", chapterId: "ch6", title: "Conditionnel type 1 & 2", icon: "🔀",
+  desc: "if + présent/will, if + passé/would",
+  lessons: {
+    easy: [
+      qcm("Type 1 (réel/probable) : « If it rains, I ___ home. »", ["stay", "will stay", "stayed", "would stay"], 1),
+      qcm("Type 2 (hypothétique) : « If I were rich, I ___ a house. »", ["buy", "will buy", "bought", "would buy"], 3),
+      fillEx("If it rains, I ___ (stay) home.", "will stay"),
+      fillEx("If I ___ (be) you, I would apologize.", "were"),
+      matchPairs([["if", "si"], ["would", "conditionnel (-rais)"], ["unless", "à moins que"], ["real condition", "condition réelle"], ["hypothetical", "hypothétique"], ["possible", "possible"]]),
+    ],
+    medium: [
+      fillEx("If she studies hard, she ___ (pass) the exam.", "will pass"),
+      fillEx("If I had more time, I ___ (travel) more.", "would travel"),
+      ordEx(["If", "it", "rains", "I", "will", "stay", "home", "."]),
+      trEx("Traduis : Si j'étais toi, je démissionnerais.", "If I were you, I would resign", ["If I were you I would resign"]),
+      qcm("« Unless » signifie...", ["Si", "Sauf si / à moins que", "Parce que", "Bien que"], 1),
+      lisEx("If it rains, I will stay home", "Qu'as-tu entendu ?", ["If it rains, I will stay home", "If it rains, I would stay home", "If it rained, I would stay home", "If it snows, I will stay home"], 0),
+    ],
+    hard: [
+      fillEx("If I ___ (win) the lottery, I would travel the world.", "won"),
+      trEx("Traduis : Si tu ne te dépêches pas, tu vas rater le train.", "If you don't hurry, you will miss the train"),
+      ordEx(["Unless", "you", "study", "you", "will", "fail", "."]),
+      qcm("Quelle phrase est correcte (type 2) ?", ["If I was rich, I will travel", "If I were rich, I would travel", "If I am rich, I would travel", "If I were rich, I will travel"], 1),
+      trEx("Traduis : Que ferais-tu si tu gagnais un million ?", "What would you do if you won a million", ["What would you do if you won a million?"]),
+      fillEx("If he ___ (not/be) so lazy, he would find a job.", "were not", ["weren't"]),
+    ],
+  },
+  quiz: [
+    qcm("Type 1 : « If it rains, I ___ home. »", ["stay", "will stay", "stayed", "would stay"], 1),
+    qcm("Type 2 : « If I were rich, I ___ a house. »", ["buy", "will buy", "bought", "would buy"], 3),
+    fillEx("If she studies, she ___ (pass) the exam.", "will pass"),
+    fillEx("If I ___ (have) more money, I would travel.", "had"),
+    fillEx("If I ___ (be) you, I would say sorry.", "were"),
+    fillEx("If it ___ (rain) tomorrow, we will cancel the picnic.", "rains"),
+    qcm("« Unless » signifie...", ["Si", "Sauf si", "Parce que", "Toujours"], 1),
+    qcm("Quelle phrase est du type 2 ?", ["If I win, I will celebrate", "If I won, I would celebrate", "If I have won, I celebrate", "If I will win, I celebrate"], 1),
+    ordEx(["If", "it", "rains", "I", "will", "stay", "home", "."]),
+    ordEx(["If", "I", "were", "you", "I", "would", "apologize", "."]),
+    ordEx(["Unless", "you", "hurry", "you", "will", "be", "late", "."]),
+    trEx("Traduis : Si tu étudies, tu réussiras.", "If you study, you will succeed"),
+    trEx("Traduis : Si j'avais le temps, je voyagerais plus.", "If I had time, I would travel more"),
+    trEx("Traduis : Que ferais-tu si tu étais riche ?", "What would you do if you were rich"),
+    qcm("« If I were you » signifie...", ["Si j'étais toi", "Si tu étais moi", "Si j'ai été toi", "Quand j'étais toi"], 0),
+    fillEx("If they ___ (not/leave) now, they will miss the bus.", "do not leave", ["don't leave"]),
+    fillEx("I would help you if I ___ (can). (irréel présent)", "could"),
+    qcm("Quelle phrase exprime une situation réelle et probable ?", ["If I were a bird, I would fly", "If it rains, I will take an umbrella", "If I had wings, I would fly", "If I was a millionaire"], 1),
+    fillEx("She would be happier if she ___ (change) jobs.", "changed"),
+    lisEx("If I were you, I would apologize", "Qu'as-tu entendu ?", ["If I were you, I would apologize", "If I was you, I will apologize", "If you were me, I would apologize", "If I am you, I would apologize"], 0),
+  ],
+};
+
+const u_ch6_2 = {
+  id: "ch6-u2", chapterId: "ch6", title: "Conditionnel type 3 & mixte", icon: "⏳",
+  desc: "if + past perfect, would have, regrets",
+  lessons: {
+    easy: [
+      qcm("Type 3 (passé irréel) : « If I had studied, I ___ passed. »", ["will have", "would have", "would", "had"], 1),
+      qcm("Le type 3 utilise...", ["if + present", "if + past", "if + past perfect", "if + future"], 2),
+      fillEx("If I had known, I ___ (help) you.", "would have helped"),
+      fillEx("If she had studied, she ___ (pass) the exam.", "would have passed"),
+      matchPairs([["had + participe passé", "plus-que-parfait"], ["would have", "aurait (conditionnel passé)"], ["regret", "regret"], ["past unreal", "passé irréel"], ["mixed conditional", "conditionnel mixte"], ["if only", "si seulement"]]),
+    ],
+    medium: [
+      fillEx("If I had left earlier, I ___ (not/miss) the train.", "would not have missed", ["wouldn't have missed"]),
+      trEx("Traduis : Si j'avais su, je serais venu.", "If I had known, I would have come"),
+      ordEx(["If", "I", "had", "studied", "I", "would", "have", "passed", "."]),
+      qcm("« If only I had listened! » exprime...", ["Un espoir futur", "Un regret du passé", "Une certitude", "Une question"], 1),
+      fillEx("If they had left on time, they ___ (not/be) late.", "would not have been", ["wouldn't have been"]),
+      lisEx("If I had known, I would have helped you", "Qu'as-tu entendu ?", ["If I had known, I would have helped you", "If I knew, I would help you", "If I had known, I will help you", "If I know, I would have helped"], 0),
+    ],
+    hard: [
+      qcm("Conditionnel mixte : « If I had studied medicine, I ___ a doctor now. »", ["would be", "would have been", "will be", "was"], 0),
+      trEx("Traduis : Si elle n'avait pas raté le bus, elle serait déjà là.", "If she hadn't missed the bus, she would already be here", ["If she had not missed the bus, she would already be here"]),
+      ordEx(["If", "only", "I", "had", "listened", "to", "you", "."]),
+      fillEx("If he had trained harder, he ___ (be) an athlete today.", "would be"),
+      trEx("Traduis : Si j'avais économisé, je ne serais pas endetté aujourd'hui.", "If I had saved money, I would not be in debt today", ["If I had saved money, I wouldn't be in debt today"]),
+      qcm("« If only » exprime...", ["Un fait certain", "Un regret ou souhait", "Une question polie", "Un ordre"], 1),
+    ],
+  },
+  quiz: [
+    qcm("Type 3 : « If I had studied, I ___ passed. »", ["will have", "would have", "would", "had"], 1),
+    qcm("Structure du type 3 :", ["if + present", "if + past", "if + past perfect", "if + future"], 2),
+    fillEx("If I had known, I ___ (help) you.", "would have helped"),
+    fillEx("If she had studied, she ___ (pass) the exam.", "would have passed"),
+    fillEx("If we had left earlier, we ___ (not/miss) the flight.", "would not have missed", ["wouldn't have missed"]),
+    fillEx("If they had trained, they ___ (win) the match.", "would have won"),
+    qcm("Conditionnel mixte : « If I had studied medicine, I ___ a doctor now. »", ["would be", "would have been", "will be", "was"], 0),
+    qcm("« If only I had listened! » exprime...", ["Un espoir", "Un regret du passé", "Une certitude", "Une question"], 1),
+    ordEx(["If", "I", "had", "studied", "I", "would", "have", "passed", "."]),
+    ordEx(["If", "only", "I", "had", "listened", "."]),
+    ordEx(["She", "would", "have", "come", "if", "she", "had", "known", "."]),
+    trEx("Traduis : Si j'avais su, je serais venu.", "If I had known, I would have come"),
+    trEx("Traduis : Si tu avais étudié, tu aurais réussi.", "If you had studied, you would have passed"),
+    trEx("Traduis : Si elle n'avait pas raté le bus, elle serait déjà là.", "If she hadn't missed the bus, she would already be here", ["If she had not missed the bus, she would already be here"]),
+    qcm("« If only » exprime...", ["Un fait certain", "Un regret ou souhait", "Une question polie", "Un ordre"], 1),
+    fillEx("If he had trained harder, he ___ (be) an athlete today.", "would be"),
+    fillEx("If I ___ (not/lose) my job, I would have bought a car.", "had not lost", ["hadn't lost"]),
+    qcm("Quelle phrase est un conditionnel mixte correct ?", ["If I had studied medicine, I would be a doctor now", "If I study medicine, I would be a doctor", "If I had studied medicine, I will be a doctor", "If I studied medicine, I would have been a doctor"], 0),
+    trEx("Traduis : Nous aurions gagné si nous avions mieux joué.", "We would have won if we had played better"),
+    lisEx("If she had studied, she would have passed", "Qu'as-tu entendu ?", ["If she had studied, she would have passed", "If she studies, she will pass", "If she had studied, she will pass", "If she studied, she would pass"], 0),
+  ],
+};
+
+/* ============================================================
+   CHAPITRE 7 — VOIX PASSIVE & DISCOURS RAPPORTÉ (B2)
+   ============================================================ */
+
+const u_ch7_1 = {
+  id: "ch7-u1", chapterId: "ch7", title: "La voix passive", icon: "🔁",
+  desc: "be + participe passé",
+  lessons: {
+    easy: [
+      qcm("Voix passive de « They make cars. » :", ["Cars make them", "Cars are made", "Cars is made", "Cars was made"], 1),
+      qcm("Structure de la voix passive :", ["be + participe passé", "have + participe passé", "be + infinitif", "will + verbe"], 0),
+      fillEx("The letter ___ (write) yesterday.", "was written"),
+      fillEx("English ___ (speak) all over the world.", "is spoken"),
+      matchPairs([["active voice", "voix active"], ["passive voice", "voix passive"], ["by", "par (agent)"], ["subject", "sujet"], ["object", "objet (complément)"], ["past participle", "participe passé"]]),
+    ],
+    medium: [
+      fillEx("The house ___ (build) in 1990.", "was built"),
+      fillEx("This song ___ (sing) by millions of people.", "is sung"),
+      ordEx(["The", "cake", "was", "made", "by", "my", "mother", "."]),
+      trEx("Traduis : La voiture a été réparée hier.", "The car was repaired yesterday"),
+      qcm("Pourquoi utilise-t-on la voix passive ?", ["Pour insister sur qui fait l'action", "Quand l'auteur de l'action est inconnu ou moins important", "Seulement au passé", "Jamais en anglais courant"], 1),
+      lisEx("The window was broken by the storm", "Qu'as-tu entendu ?", ["The window was broken by the storm", "The storm broke the window", "The window breaks in storms", "The window is broken"], 0),
+    ],
+    hard: [
+      fillEx("The report ___ (finish) by tomorrow.", "will be finished"),
+      trEx("Traduis : Ce problème doit être résolu rapidement.", "This problem must be solved quickly"),
+      ordEx(["The", "thief", "was", "arrested", "by", "the", "police", "."]),
+      qcm("Voix passive de « Someone stole my bike. » :", ["My bike stole someone", "My bike was stolen", "My bike is stealing", "My bike has stole"], 1),
+      trEx("Traduis : Le nouveau pont est en train d'être construit.", "The new bridge is being built"),
+      fillEx("This medicine ___ (should/take) twice a day.", "should be taken"),
+    ],
+  },
+  quiz: [
+    qcm("Voix passive de « They make cars. » :", ["Cars make them", "Cars are made", "Cars is made", "Cars was made"], 1),
+    qcm("Structure de base de la voix passive :", ["be + participe passé", "have + participe passé", "be + infinitif", "will + verbe"], 0),
+    fillEx("The letter ___ (write) yesterday.", "was written"),
+    fillEx("English ___ (speak) all over the world.", "is spoken"),
+    fillEx("The house ___ (build) in 1990.", "was built"),
+    fillEx("This song ___ (sing) by millions of people.", "is sung"),
+    fillEx("The report ___ (finish) by tomorrow.", "will be finished"),
+    qcm("Voix passive de « Someone stole my bike. » :", ["My bike stole someone", "My bike was stolen", "My bike is stealing", "My bike has stole"], 1),
+    qcm("Pourquoi utiliser la voix passive ?", ["Pour insister sur l'auteur", "Quand l'auteur est inconnu/moins important", "Seulement au passé", "Jamais"], 1),
+    ordEx(["The", "cake", "was", "made", "by", "my", "mother", "."]),
+    ordEx(["The", "thief", "was", "arrested", "by", "the", "police", "."]),
+    ordEx(["This", "house", "was", "built", "in", "1990", "."]),
+    trEx("Traduis : La voiture a été réparée hier.", "The car was repaired yesterday"),
+    trEx("Traduis : Ce problème doit être résolu rapidement.", "This problem must be solved quickly"),
+    trEx("Traduis : Le nouveau pont est en train d'être construit.", "The new bridge is being built"),
+    trEx("Traduis : Les lettres sont envoyées chaque jour.", "The letters are sent every day"),
+    fillEx("This medicine ___ (should/take) twice a day.", "should be taken"),
+    fillEx("The window ___ (break) by the storm.", "was broken"),
+    qcm("Quelle phrase est à la voix passive ?", ["She wrote the letter", "The letter was written by her", "She is writing the letter", "She has written the letter"], 1),
+    lisEx("The window was broken by the storm", "Qu'as-tu entendu ?", ["The window was broken by the storm", "The storm broke the window", "The window breaks easily", "The window is broken now"], 0),
+  ],
+};
+
+const u_ch7_2 = {
+  id: "ch7-u2", chapterId: "ch7", title: "Le discours rapporté", icon: "💬",
+  desc: "Reported speech, recul des temps",
+  lessons: {
+    easy: [
+      qcm("« I am tired » devient au discours rapporté :", ["He says he is tired", "He said he was tired", "He said he is tired", "He say he was tired"], 1),
+      qcm("Au discours rapporté, 'will' devient...", ["would", "will", "can", "must"], 0),
+      fillEx("She said, « I am happy. » → She said she ___ happy.", "was"),
+      fillEx("He said, « I will call you. » → He said he ___ call me.", "would"),
+      matchPairs([["said", "a dit"], ["told", "a dit à"], ["reported speech", "discours rapporté"], ["direct speech", "discours direct"], ["backshift", "recul des temps"], ["asked", "a demandé"]]),
+    ],
+    medium: [
+      fillEx("« I have finished. » → She said she ___ finished.", "had"),
+      fillEx("« I can swim. » → He said he ___ swim.", "could"),
+      ordEx(["She", "said", "that", "she", "was", "tired", "."]),
+      trEx("Traduis : Il a dit qu'il viendrait demain.", "He said he would come tomorrow"),
+      qcm("« Tell » vs « Say » : quelle phrase est correcte ?", ["He told that he was busy", "He told me that he was busy", "He said me that he was busy", "He said to that he was busy"], 1),
+      lisEx("She said she would call me later", "Qu'as-tu entendu ?", ["She said she would call me later", "She says she will call me later", "She said she called me later", "She said she calls me later"], 0),
+    ],
+    hard: [
+      fillEx("« Where do you live? » → He asked me where I ___ (live).", "lived"),
+      trEx("Traduis : Elle m'a demandé si j'étais prêt.", "She asked me if I was ready"),
+      ordEx(["He", "asked", "me", "if", "I", "was", "ready", "."]),
+      qcm("« Can you help me? » au discours rapporté devient :", ["She asked if I can help her", "She asked if I could help her", "She asked can I help her", "She asked if I could helped her"], 1),
+      trEx("Traduis : Ils ont annoncé qu'ils avaient gagné.", "They announced that they had won"),
+      fillEx("« Don't be late! » → He told me ___ (not/be) late.", "not to be"),
+    ],
+  },
+  quiz: [
+    qcm("« I am tired » devient :", ["He says he is tired", "He said he was tired", "He said he is tired", "He say he was tired"], 1),
+    qcm("'will' devient...", ["would", "will", "can", "must"], 0),
+    qcm("'can' devient...", ["could", "can", "will", "would"], 0),
+    fillEx("She said, « I am happy. » → She said she ___ happy.", "was"),
+    fillEx("He said, « I will call you. » → He said he ___ call me.", "would"),
+    fillEx("« I have finished. » → She said she ___ finished.", "had"),
+    fillEx("« I can swim. » → He said he ___ swim.", "could"),
+    fillEx("« Where do you live? » → He asked where I ___ (live).", "lived"),
+    qcm("« Tell » ou « Say » : phrase correcte :", ["He told that he was busy", "He told me that he was busy", "He said me that he was busy", "He said to me he was busy"], 1),
+    ordEx(["She", "said", "that", "she", "was", "tired", "."]),
+    ordEx(["He", "asked", "me", "if", "I", "was", "ready", "."]),
+    ordEx(["They", "said", "they", "would", "come", "."]),
+    trEx("Traduis : Il a dit qu'il viendrait demain.", "He said he would come tomorrow"),
+    trEx("Traduis : Elle m'a demandé si j'étais prêt.", "She asked me if I was ready"),
+    trEx("Traduis : Ils ont annoncé qu'ils avaient gagné.", "They announced that they had won"),
+    qcm("« Can you help me? » devient :", ["She asked if I can help her", "She asked if I could help her", "She asked can I help her", "She asked if I could helped her"], 1),
+    fillEx("« Don't be late! » → He told me ___ (not/be) late.", "not to be"),
+    fillEx("« I saw her yesterday. » → He said he ___ (see) her the day before.", "had seen"),
+    qcm("Quelle phrase rapporte correctement « She is cooking. » ?", ["She said she is cooking", "She said she was cooking", "She said she cooks", "She said she has cooked"], 1),
+    lisEx("She said she would call me later", "Qu'as-tu entendu ?", ["She said she would call me later", "She says she will call me later", "She said she called me later", "She said she calls me later"], 0),
+  ],
+};
+
+/* ============================================================
+   CHAPITRE 8 — MODAUX AVANCÉS & NUANCES (B2)
+   ============================================================ */
+
+const u_ch8_1 = {
+  id: "ch8-u1", chapterId: "ch8", title: "Modaux de déduction", icon: "🔍",
+  desc: "must / might / can't have been",
+  lessons: {
+    easy: [
+      qcm("« Il doit être fatigué » (déduction logique) se dit :", ["He can be tired", "He must be tired", "He should be tired", "He might tired"], 1),
+      qcm("« Ça ne peut pas être vrai » se dit :", ["It can't be true", "It mustn't be true", "It shouldn't be true", "It won't be true"], 0),
+      fillEx("She is not answering, she ___ (must) be busy.", "must"),
+      fillEx("It ___ (might) rain later, I'm not sure.", "might"),
+      matchPairs([["must", "doit (déduction certaine)"], ["might/could", "pourrait (possibilité)"], ["can't", "ne peut pas (impossible)"], ["deduction", "déduction"], ["certainty", "certitude"], ["possibility", "possibilité"]]),
+    ],
+    medium: [
+      fillEx("He ___ (must/be) at home, his car is outside.", "must be"),
+      fillEx("She ___ (can't/be) at work, it's Sunday.", "can't be"),
+      ordEx(["She", "must", "be", "tired", "after", "the", "trip", "."]),
+      trEx("Traduis : Il doit être malade, il n'est pas venu.", "He must be sick, he didn't come"),
+      qcm("« It might have rained last night » exprime...", ["Une certitude passée", "Une possibilité passée", "Une impossibilité", "Un ordre"], 1),
+      lisEx("He must be tired after the trip", "Qu'as-tu entendu ?", ["He must be tired after the trip", "He might be tired after the trip", "He can't be tired after the trip", "He was tired after the trip"], 0),
+    ],
+    hard: [
+      fillEx("She ___ (must/have/forget) her keys, she can't find them.", "must have forgotten"),
+      trEx("Traduis : Il n'a pas pu faire ça, c'est impossible.", "He can't have done that"),
+      ordEx(["She", "must", "have", "forgotten", "her", "keys", "."]),
+      qcm("« He can't have said that » signifie...", ["Il a dit ça, c'est sûr", "Il est impossible qu'il ait dit ça", "Il devrait dire ça", "Il pourrait dire ça"], 1),
+      trEx("Traduis : Elle a pu oublier son rendez-vous.", "She might have forgotten her appointment"),
+      fillEx("They ___ (might/have/miss) the train.", "might have missed"),
+    ],
+  },
+  quiz: [
+    qcm("Déduction certaine : « Il doit être fatigué » :", ["He can be tired", "He must be tired", "He should be tired", "He might tired"], 1),
+    qcm("Impossible : « Ça ne peut pas être vrai » :", ["It can't be true", "It mustn't be true", "It shouldn't be true", "It won't be true"], 0),
+    fillEx("She is not answering, she ___ (must) be busy.", "must"),
+    fillEx("It ___ (might) rain later.", "might"),
+    fillEx("He ___ (must/be) at home, his car is outside.", "must be"),
+    fillEx("She ___ (can't/be) at work, it's Sunday.", "can't be"),
+    fillEx("She ___ (must/have/forget) her keys.", "must have forgotten"),
+    fillEx("They ___ (might/have/miss) the train.", "might have missed"),
+    qcm("« It might have rained last night » exprime...", ["Une certitude", "Une possibilité passée", "Une impossibilité", "Un ordre"], 1),
+    qcm("« He can't have said that » signifie...", ["Il l'a dit, c'est sûr", "C'est impossible qu'il ait dit ça", "Il devrait le dire", "Il pourrait le dire"], 1),
+    ordEx(["She", "must", "be", "tired", "after", "the", "trip", "."]),
+    ordEx(["She", "must", "have", "forgotten", "her", "keys", "."]),
+    ordEx(["They", "might", "have", "missed", "the", "train", "."]),
+    trEx("Traduis : Il doit être malade, il n'est pas venu.", "He must be sick, he didn't come"),
+    trEx("Traduis : Il n'a pas pu faire ça, c'est impossible.", "He can't have done that"),
+    trEx("Traduis : Elle a pu oublier son rendez-vous.", "She might have forgotten her appointment"),
+    fillEx("You ___ (must/be) joking!", "must be"),
+    qcm("Quel modal exprime la plus grande certitude ?", ["Might", "Could", "Must", "May"], 2),
+    fillEx("He ___ (can't/have/left) already, his coat is here.", "can't have left"),
+    lisEx("She must have forgotten her keys", "Qu'as-tu entendu ?", ["She must have forgotten her keys", "She might have forgotten her keys", "She can't have forgotten her keys", "She forgot her keys"], 0),
+  ],
+};
+
+const u_ch8_2 = {
+  id: "ch8-u2", chapterId: "ch8", title: "Obligation et conseil", icon: "⚖️",
+  desc: "should have, ought to, needn't",
+  lessons: {
+    easy: [
+      qcm("« Tu aurais dû étudier » se dit :", ["You should study", "You should have studied", "You must study", "You needn't study"], 1),
+      qcm("« Tu n'as pas besoin de » se dit :", ["You mustn't", "You needn't", "You shouldn't", "You can't"], 1),
+      fillEx("You ___ (should) see a doctor.", "should"),
+      fillEx("You ___ (needn't) worry, everything is fine.", "needn't"),
+      matchPairs([["should have", "aurait dû"], ["ought to", "devrait (conseil)"], ["needn't", "pas besoin de"], ["must not", "ne doit pas (interdiction)"], ["advice", "conseil"], ["obligation", "obligation"]]),
+    ],
+    medium: [
+      fillEx("You ___ (shouldn't/eat) so much sugar.", "shouldn't eat"),
+      fillEx("You ___ (ought to) apologize to her.", "ought to"),
+      ordEx(["You", "should", "have", "called", "me", "."]),
+      trEx("Traduis : Tu n'aurais pas dû mentir.", "You shouldn't have lied"),
+      qcm("« must » exprime souvent...", ["Une obligation externe", "Une obligation personnelle/de l'auteur", "Une interdiction seulement", "Un conseil léger"], 1),
+      lisEx("You should have called me", "Qu'as-tu entendu ?", ["You should have called me", "You should call me", "You shouldn't have called me", "You must call me"], 0),
+    ],
+    hard: [
+      fillEx("You ___ (needn't/have/worry), everything was fine.", "needn't have worried"),
+      trEx("Traduis : Tu n'avais pas besoin de venir, mais merci.", "You needn't have come, but thank you"),
+      ordEx(["You", "needn't", "have", "worried", "about", "it", "."]),
+      qcm("« You needn't have worried » signifie...", ["Tu devais t'inquiéter", "Tu ne devais pas t'inquiéter mais tu l'as fait", "Tu n'as jamais été inquiet", "Tu dois encore t'inquiéter"], 1),
+      trEx("Traduis : Vous auriez dû réserver à l'avance.", "You should have booked in advance"),
+      qcm("« You mustn't smoke here » exprime...", ["Un conseil", "Une interdiction", "Une possibilité", "Un regret"], 1),
+    ],
+  },
+  quiz: [
+    qcm("« Tu aurais dû étudier » :", ["You should study", "You should have studied", "You must study", "You needn't study"], 1),
+    qcm("« Tu n'as pas besoin de » :", ["You mustn't", "You needn't", "You shouldn't", "You can't"], 1),
+    fillEx("You ___ (should) see a doctor.", "should"),
+    fillEx("You ___ (needn't) worry.", "needn't"),
+    fillEx("You ___ (shouldn't/eat) so much sugar.", "shouldn't eat"),
+    fillEx("You ___ (ought to) apologize to her.", "ought to"),
+    fillEx("You ___ (needn't/have/worry), everything was fine.", "needn't have worried"),
+    fillEx("You ___ (should/have/booked) in advance.", "should have booked"),
+    qcm("« You needn't have worried » signifie...", ["Tu devais t'inquiéter", "Tu ne devais pas mais tu l'as fait", "Jamais inquiet", "Encore inquiet"], 1),
+    qcm("« You mustn't smoke here » exprime...", ["Un conseil", "Une interdiction", "Une possibilité", "Un regret"], 1),
+    ordEx(["You", "should", "have", "called", "me", "."]),
+    ordEx(["You", "needn't", "have", "worried", "about", "it", "."]),
+    ordEx(["You", "ought", "to", "apologize", "to", "her", "."]),
+    trEx("Traduis : Tu n'aurais pas dû mentir.", "You shouldn't have lied"),
+    trEx("Traduis : Tu n'avais pas besoin de venir, mais merci.", "You needn't have come, but thank you"),
+    trEx("Traduis : Vous auriez dû réserver à l'avance.", "You should have booked in advance"),
+    qcm("« must » exprime souvent...", ["Une obligation externe uniquement", "Une obligation personnelle", "Une interdiction seulement", "Un conseil léger"], 1),
+    fillEx("He ___ (ought not to) speak like that.", "ought not to"),
+    fillEx("We ___ (should/have/left) earlier.", "should have left"),
+    lisEx("You should have called me", "Qu'as-tu entendu ?", ["You should have called me", "You should call me", "You shouldn't have called me", "You must call me"], 0),
+  ],
+};
+
+/* ============================================================
+   CHAPITRE 9 — ANGLAIS DES AFFAIRES (B2-C1)
+   ============================================================ */
+
+const u_ch9_1 = {
+  id: "ch9-u1", chapterId: "ch9", title: "Réunions & négociations", icon: "🤝",
+  desc: "Vocabulaire et expressions professionnelles",
+  lessons: {
+    easy: [
+      qcm("« Passons au point suivant » se dit :", ["Let's move on to the next point", "Let's stop here", "Let's repeat the point", "Let's cancel the meeting"], 0),
+      qcm("« Je suis d'accord avec vous » se dit :", ["I disagree with you", "I agree with you", "I doubt you", "I ignore you"], 1),
+      fillEx("Can we ___ (schedule) a meeting for Monday?", "schedule"),
+      qcm("« agenda » signifie...", ["Un agenda papier", "L'ordre du jour d'une réunion", "Un contrat", "Un rapport"], 1),
+      matchPairs([["agenda", "ordre du jour"], ["deadline", "date limite"], ["negotiation", "négociation"], ["compromise", "compromis"], ["stakeholder", "partie prenante"], ["proposal", "proposition"]]),
+    ],
+    medium: [
+      fillEx("We need to ___ (reach) an agreement by Friday.", "reach"),
+      qcm("« Let's find a compromise » signifie...", ["Trouvons un accord équilibré", "Annulons tout", "Attaquons-les", "Ignorons le problème"], 0),
+      ordEx(["Let's", "move", "on", "to", "the", "next", "point", "."]),
+      trEx("Traduis : Pouvons-nous reporter la réunion à demain ?", "Can we postpone the meeting until tomorrow", ["Can we postpone the meeting to tomorrow?"]),
+      qcm("« I'd like to raise a point » signifie...", ["Je voudrais soulever un point", "Je voudrais annuler", "Je voudrais partir", "Je voudrais applaudir"], 0),
+      lisEx("Let's find a compromise that works for everyone", "Qu'as-tu entendu ?", ["Let's find a compromise that works for everyone", "Let's cancel the negotiation", "Let's postpone the decision", "Let's agree to disagree"], 0),
+    ],
+    hard: [
+      trEx("Traduis : Nous devons parvenir à un accord mutuellement bénéfique.", "We need to reach a mutually beneficial agreement"),
+      fillEx("The negotiations ___ (break down) after hours of discussion.", "broke down"),
+      ordEx(["We", "need", "to", "reach", "a", "mutually", "beneficial", "agreement", "."]),
+      qcm("« To be on the same page » signifie...", ["Être d'accord / avoir la même compréhension", "Lire le même livre", "Être en désaccord", "Écrire un rapport ensemble"], 0),
+      trEx("Traduis : Nous sommes dans une impasse.", "We are at a deadlock", ["We're at a deadlock"]),
+      qcm("« Let's table this discussion for now » signifie...", ["Reportons cette discussion", "Concluons cette discussion", "Refusons cette discussion", "Commençons cette discussion"], 0),
+    ],
+  },
+  quiz: [
+    qcm("« Passons au point suivant » :", ["Let's move on to the next point", "Let's stop here", "Let's repeat the point", "Let's cancel the meeting"], 0),
+    qcm("« Je suis d'accord avec vous » :", ["I disagree with you", "I agree with you", "I doubt you", "I ignore you"], 1),
+    qcm("« agenda » signifie...", ["Agenda papier", "Ordre du jour", "Contrat", "Rapport"], 1),
+    fillEx("Can we ___ (schedule) a meeting for Monday?", "schedule"),
+    fillEx("We need to ___ (reach) an agreement by Friday.", "reach"),
+    qcm("« Let's find a compromise » signifie...", ["Trouver un accord équilibré", "Tout annuler", "Les attaquer", "Ignorer le problème"], 0),
+    qcm("« I'd like to raise a point » signifie...", ["Soulever un point", "Annuler", "Partir", "Applaudir"], 0),
+    qcm("« To be on the same page » signifie...", ["Être d'accord", "Lire le même livre", "Être en désaccord", "Écrire ensemble"], 0),
+    qcm("« Let's table this discussion » signifie...", ["Reporter la discussion", "Conclure la discussion", "Refuser la discussion", "Commencer la discussion"], 0),
+    fillEx("The negotiations ___ (break down) after hours.", "broke down"),
+    ordEx(["Let's", "move", "on", "to", "the", "next", "point", "."]),
+    ordEx(["We", "need", "to", "reach", "an", "agreement", "."]),
+    ordEx(["We", "are", "at", "a", "deadlock", "."]),
+    trEx("Traduis : Pouvons-nous reporter la réunion à demain ?", "Can we postpone the meeting until tomorrow", ["Can we postpone the meeting to tomorrow?"]),
+    trEx("Traduis : Nous devons parvenir à un accord mutuellement bénéfique.", "We need to reach a mutually beneficial agreement"),
+    trEx("Traduis : Nous sommes dans une impasse.", "We are at a deadlock", ["We're at a deadlock"]),
+    fillEx("Let's ___ (stick) to the agenda.", "stick"),
+    qcm("« stakeholder » signifie...", ["Actionnaire uniquement", "Partie prenante", "Employé junior", "Client mécontent"], 1),
+    fillEx("I'd like to ___ (raise) a point about the budget.", "raise"),
+    lisEx("Let's find a compromise that works for everyone", "Qu'as-tu entendu ?", ["Let's find a compromise that works for everyone", "Let's cancel the negotiation", "Let's postpone the decision", "Let's agree to disagree"], 0),
+  ],
+};
+
+const u_ch9_2 = {
+  id: "ch9-u2", chapterId: "ch9", title: "Emails professionnels", icon: "✉️",
+  desc: "Rédiger un email formel en anglais",
+  lessons: {
+    easy: [
+      qcm("Comment commencer un email formel à un inconnu ?", ["Hi mate,", "Dear Sir/Madam,", "Hey,", "Yo,"], 1),
+      qcm("Comment terminer un email formel ?", ["Bye", "See ya", "Best regards,", "Cheers mate"], 2),
+      fillEx("I am writing ___ (regarding) your recent order.", "regarding"),
+      qcm("« I look forward to hearing from you » signifie...", ["J'attends votre réponse avec impatience", "Je ne veux plus de nouvelles", "Au revoir", "Je suis désolé"], 0),
+      matchPairs([["Dear", "Cher/Chère"], ["Best regards", "Cordialement"], ["attachment", "pièce jointe"], ["recipient", "destinataire"], ["subject line", "objet (email)"], ["CC", "copie carbone"]]),
+    ],
+    medium: [
+      fillEx("Please find ___ (attached) the report.", "attached"),
+      qcm("« Could you please confirm... » est une formule...", ["Impolie", "Polie et professionnelle", "Familière", "Menaçante"], 1),
+      ordEx(["I", "am", "writing", "to", "confirm", "our", "meeting", "."]),
+      trEx("Traduis : Je vous remercie de votre réponse rapide.", "Thank you for your quick response", ["Thank you for your prompt response"]),
+      qcm("« As per our conversation » signifie...", ["Comme convenu lors de notre conversation", "Malgré notre conversation", "Avant notre conversation", "Sans notre conversation"], 0),
+      lisEx("Please find attached the report you requested", "Qu'as-tu entendu ?", ["Please find attached the report you requested", "Please send me the report", "I have deleted the report", "The report is not ready yet"], 0),
+    ],
+    hard: [
+      trEx("Traduis : Suite à notre appel téléphonique, veuillez trouver ci-joint le contrat.", "Following our phone call, please find the contract attached", ["Further to our phone call, please find attached the contract"]),
+      fillEx("I would like to ___ (follow up) on my previous email.", "follow up"),
+      ordEx(["I", "would", "like", "to", "follow", "up", "on", "my", "previous", "email", "."]),
+      qcm("Quelle formule est la plus formelle pour une demande ?", ["Give me the file", "Can you give me the file?", "I would be grateful if you could send me the file", "Send the file now"], 2),
+      trEx("Traduis : N'hésitez pas à me contacter si vous avez des questions.", "Please do not hesitate to contact me if you have any questions", ["Feel free to contact me if you have any questions"]),
+      qcm("« I apologize for the delay » signifie...", ["Je m'excuse pour le retard", "Je félicite pour le retard", "Je nie le retard", "J'ignore le retard"], 0),
+    ],
+  },
+  quiz: [
+    qcm("Début formel à un inconnu :", ["Hi mate,", "Dear Sir/Madam,", "Hey,", "Yo,"], 1),
+    qcm("Fin formelle :", ["Bye", "See ya", "Best regards,", "Cheers mate"], 2),
+    fillEx("I am writing ___ (regarding) your recent order.", "regarding"),
+    fillEx("Please find ___ (attached) the report.", "attached"),
+    qcm("« I look forward to hearing from you » signifie...", ["J'attends votre réponse", "Je ne veux plus de nouvelles", "Au revoir", "Désolé"], 0),
+    qcm("« Could you please confirm... » est...", ["Impolie", "Polie et professionnelle", "Familière", "Menaçante"], 1),
+    qcm("« As per our conversation » signifie...", ["Comme convenu", "Malgré", "Avant", "Sans"], 0),
+    qcm("Formule la plus formelle :", ["Give me the file", "Can you give me the file?", "I would be grateful if you could send me the file", "Send the file now"], 2),
+    qcm("« I apologize for the delay » signifie...", ["Je m'excuse du retard", "Je félicite", "Je nie", "J'ignore"], 0),
+    fillEx("I would like to ___ (follow up) on my previous email.", "follow up"),
+    ordEx(["I", "am", "writing", "to", "confirm", "our", "meeting", "."]),
+    ordEx(["Please", "find", "attached", "the", "report", "."]),
+    ordEx(["I", "look", "forward", "to", "hearing", "from", "you", "."]),
+    trEx("Traduis : Je vous remercie de votre réponse rapide.", "Thank you for your quick response", ["Thank you for your prompt response"]),
+    trEx("Traduis : Suite à notre appel téléphonique, veuillez trouver ci-joint le contrat.", "Following our phone call, please find the contract attached", ["Further to our phone call, please find attached the contract"]),
+    trEx("Traduis : N'hésitez pas à me contacter si vous avez des questions.", "Please do not hesitate to contact me if you have any questions", ["Feel free to contact me if you have any questions"]),
+    fillEx("Thank you for your ___ (patience).", "patience"),
+    qcm("« CC » en email signifie...", ["Copie carbone (destinataires en copie)", "Confirmation de commande", "Contrat client", "Code confidentiel"], 0),
+    fillEx("I am writing to ___ (inform) you that the meeting has been rescheduled.", "inform"),
+    lisEx("Please find attached the report you requested", "Qu'as-tu entendu ?", ["Please find attached the report you requested", "Please send me the report", "I have deleted the report", "The report is not ready yet"], 0),
+  ],
+};
+
+/* ============================================================
+   CHAPITRE 10 — DÉBATS & OPINIONS (C1)
+   ============================================================ */
+
+const u_ch10_1 = {
+  id: "ch10-u1", chapterId: "ch10", title: "Exprimer une opinion", icon: "🗣️",
+  desc: "Nuancer et justifier son point de vue",
+  lessons: {
+    easy: [
+      qcm("« À mon avis » se dit :", ["In my opinion", "By my way", "At my think", "On my view"], 0),
+      qcm("« Je suis plutôt d'accord » se dit :", ["I strongly disagree", "I tend to agree", "I never agree", "I completely disagree"], 1),
+      fillEx("I ___ (believe) that education is essential.", "believe"),
+      qcm("« It seems to me that... » signifie...", ["Il me semble que...", "Il est certain que...", "Je refuse que...", "Je doute que..."], 0),
+      matchPairs([["in my opinion", "à mon avis"], ["I would argue that", "je dirais que"], ["on the other hand", "d'un autre côté"], ["to some extent", "dans une certaine mesure"], ["as far as I'm concerned", "en ce qui me concerne"], ["I'm not entirely convinced", "je ne suis pas totalement convaincu"]]),
+    ],
+    medium: [
+      fillEx("I ___ (would argue) that remote work improves productivity.", "would argue"),
+      qcm("« To some extent, I agree » signifie...", ["Je suis totalement d'accord", "Je suis d'accord dans une certaine mesure", "Je ne suis pas d'accord", "Je suis indifférent"], 1),
+      ordEx(["In", "my", "opinion", "this", "policy", "is", "unfair", "."]),
+      trEx("Traduis : Je ne suis pas entièrement convaincu par cet argument.", "I am not entirely convinced by this argument", ["I'm not entirely convinced by this argument"]),
+      qcm("« As far as I'm concerned » signifie...", ["En ce qui me concerne", "Je m'en fiche", "Selon les autres", "Au contraire"], 0),
+      lisEx("In my opinion, this decision is a mistake", "Qu'as-tu entendu ?", ["In my opinion, this decision is a mistake", "In my opinion, this decision is great", "I have no opinion on this", "This decision was a mistake"], 0),
+    ],
+    hard: [
+      trEx("Traduis : D'un côté je comprends, mais d'un autre côté je ne suis pas d'accord.", "On one hand I understand, but on the other hand I disagree", ["On the one hand I understand, but on the other hand I disagree"]),
+      fillEx("I can see your point, ___ (however) I still disagree.", "however"),
+      ordEx(["I", "can", "see", "your", "point", "however", "I", "disagree", "."]),
+      qcm("« I beg to differ » signifie...", ["Je suis totalement d'accord", "Je me permets d'être en désaccord", "Je m'excuse", "Je ne comprends pas"], 1),
+      trEx("Traduis : Il est indéniable que le climat change.", "It is undeniable that the climate is changing"),
+      qcm("« That being said » signifie...", ["Cela dit / cependant", "Cela étant faux", "Sans le dire", "En disant cela sans arrêt"], 0),
+    ],
+  },
+  quiz: [
+    qcm("« À mon avis » :", ["In my opinion", "By my way", "At my think", "On my view"], 0),
+    qcm("« Je suis plutôt d'accord » :", ["I strongly disagree", "I tend to agree", "I never agree", "I completely disagree"], 1),
+    fillEx("I ___ (believe) that education is essential.", "believe"),
+    fillEx("I ___ (would argue) that remote work improves productivity.", "would argue"),
+    qcm("« It seems to me that... » signifie...", ["Il me semble que", "Il est certain que", "Je refuse que", "Je doute que"], 0),
+    qcm("« To some extent, I agree » signifie...", ["Totalement d'accord", "D'accord dans une certaine mesure", "Pas d'accord", "Indifférent"], 1),
+    qcm("« As far as I'm concerned » signifie...", ["En ce qui me concerne", "Je m'en fiche", "Selon les autres", "Au contraire"], 0),
+    qcm("« I beg to differ » signifie...", ["Totalement d'accord", "Permission d'être en désaccord", "Excuse", "Incompréhension"], 1),
+    qcm("« That being said » signifie...", ["Cela dit / cependant", "Cela étant faux", "Sans le dire", "En répétant cela"], 0),
+    fillEx("I can see your point, ___ (however) I still disagree.", "however"),
+    ordEx(["In", "my", "opinion", "this", "policy", "is", "unfair", "."]),
+    ordEx(["I", "can", "see", "your", "point", "however", "I", "disagree", "."]),
+    ordEx(["On", "the", "other", "hand", "I", "disagree", "."]),
+    trEx("Traduis : Je ne suis pas entièrement convaincu par cet argument.", "I am not entirely convinced by this argument", ["I'm not entirely convinced by this argument"]),
+    trEx("Traduis : D'un côté je comprends, mais d'un autre côté je ne suis pas d'accord.", "On one hand I understand, but on the other hand I disagree", ["On the one hand I understand, but on the other hand I disagree"]),
+    trEx("Traduis : Il est indéniable que le climat change.", "It is undeniable that the climate is changing"),
+    fillEx("I strongly ___ (believe) that this is the right decision.", "believe"),
+    qcm("« I'm on the fence about this » signifie...", ["Je suis totalement pour", "Je suis indécis", "Je suis totalement contre", "Je m'en moque"], 1),
+    fillEx("From my ___ (point of view), the plan is risky.", "point of view"),
+    lisEx("In my opinion, this decision is a mistake", "Qu'as-tu entendu ?", ["In my opinion, this decision is a mistake", "In my opinion, this decision is great", "I have no opinion on this", "This decision was a mistake"], 0),
+  ],
+};
+
+const u_ch10_2 = {
+  id: "ch10-u2", chapterId: "ch10", title: "Argumenter et débattre", icon: "⚔️",
+  desc: "Contre-arguments et réfutation",
+  lessons: {
+    easy: [
+      qcm("« Je ne suis pas d'accord » se dit :", ["I agree", "I disagree", "I ignore", "I doubt"], 1),
+      qcm("« Voici pourquoi » se dit :", ["Here's why", "There is why", "Here why is", "Why here is"], 0),
+      fillEx("The main ___ (argument) is that prices are too high.", "argument"),
+      qcm("« Firstly... Secondly... Finally... » sert à...", ["Organiser des arguments", "Poser une question", "Exprimer un doute", "Faire une blague"], 0),
+      matchPairs([["counterargument", "contre-argument"], ["evidence", "preuve"], ["to convince", "convaincre"], ["to persuade", "persuader"], ["debate", "débat"], ["rebuttal", "réfutation"]]),
+    ],
+    medium: [
+      fillEx("Let me ___ (counter) that argument with some facts.", "counter"),
+      qcm("« That's a fair point, but... » signifie...", ["C'est un bon point, mais...", "C'est faux, mais...", "Je refuse ce point", "Je n'ai pas d'avis"], 0),
+      ordEx(["Let", "me", "counter", "that", "argument", "with", "facts", "."]),
+      trEx("Traduis : Les preuves montrent clairement le contraire.", "The evidence clearly shows the opposite"),
+      qcm("« To play devil's advocate » signifie...", ["Défendre un point de vue opposé pour débattre", "Être vraiment démoniaque", "Refuser de débattre", "Être toujours d'accord"], 0),
+      lisEx("The evidence clearly supports my argument", "Qu'as-tu entendu ?", ["The evidence clearly supports my argument", "The evidence contradicts my argument", "There is no evidence at all", "My argument has no evidence"], 0),
+    ],
+    hard: [
+      trEx("Traduis : Bien que je comprenne votre point de vue, je ne suis pas convaincu.", "Although I understand your point of view, I am not convinced", ["Although I understand your point of view, I'm not convinced"]),
+      fillEx("This argument is ___ (flawed) because it ignores the data.", "flawed"),
+      ordEx(["Although", "I", "understand", "your", "point", "I", "disagree", "."]),
+      qcm("« That's a slippery slope argument » signifie...", ["Un raisonnement qui exagère les conséquences en chaîne", "Un argument très solide", "Un argument drôle", "Un argument scientifique prouvé"], 0),
+      trEx("Traduis : En fin de compte, les faits parlent d'eux-mêmes.", "Ultimately, the facts speak for themselves"),
+      qcm("« To play devil's advocate for a moment... » introduit...", ["Un vrai désaccord personnel", "Un argument temporaire opposé pour stimuler le débat", "Une insulte", "Une conclusion finale"], 1),
+    ],
+  },
+  quiz: [
+    qcm("« Je ne suis pas d'accord » :", ["I agree", "I disagree", "I ignore", "I doubt"], 1),
+    qcm("« Voici pourquoi » :", ["Here's why", "There is why", "Here why is", "Why here is"], 0),
+    fillEx("The main ___ (argument) is that prices are too high.", "argument"),
+    fillEx("Let me ___ (counter) that argument with some facts.", "counter"),
+    qcm("« Firstly... Secondly... Finally... » sert à...", ["Organiser des arguments", "Poser une question", "Exprimer un doute", "Faire une blague"], 0),
+    qcm("« That's a fair point, but... » signifie...", ["Bon point, mais...", "Faux, mais...", "Je refuse", "Sans avis"], 0),
+    qcm("« To play devil's advocate » signifie...", ["Défendre un point opposé pour débattre", "Être démoniaque", "Refuser de débattre", "Toujours d'accord"], 0),
+    qcm("« Slippery slope argument » signifie...", ["Exagérer des conséquences en chaîne", "Argument très solide", "Argument drôle", "Fait scientifique prouvé"], 0),
+    fillEx("This argument is ___ (flawed) because it ignores the data.", "flawed"),
+    fillEx("The evidence ___ (support) my point of view.", "supports"),
+    ordEx(["Let", "me", "counter", "that", "argument", "with", "facts", "."]),
+    ordEx(["Although", "I", "understand", "your", "point", "I", "disagree", "."]),
+    ordEx(["The", "evidence", "clearly", "shows", "the", "opposite", "."]),
+    trEx("Traduis : Les preuves montrent clairement le contraire.", "The evidence clearly shows the opposite"),
+    trEx("Traduis : Bien que je comprenne votre point de vue, je ne suis pas convaincu.", "Although I understand your point of view, I am not convinced", ["Although I understand your point of view, I'm not convinced"]),
+    trEx("Traduis : En fin de compte, les faits parlent d'eux-mêmes.", "Ultimately, the facts speak for themselves"),
+    fillEx("We need more ___ (evidence) before drawing conclusions.", "evidence"),
+    qcm("« Rebuttal » signifie...", ["Réfutation", "Approbation", "Silence", "Question"], 0),
+    fillEx("His argument failed to ___ (convince) the jury.", "convince"),
+    lisEx("The evidence clearly supports my argument", "Qu'as-tu entendu ?", ["The evidence clearly supports my argument", "The evidence contradicts my argument", "There is no evidence at all", "My argument has no evidence"], 0),
+  ],
+};
+
+CHAPTERS.push(
+  { id: "ch6", title: "Conditionnels & Hypothèses", level: "B1-B2", icon: "🔀", locked: false, units: [u_ch6_1, u_ch6_2] },
+  { id: "ch7", title: "Voix passive & Discours rapporté", level: "B2", icon: "🔁", locked: false, units: [u_ch7_1, u_ch7_2] },
+  { id: "ch8", title: "Modaux avancés & Nuances", level: "B2", icon: "🔍", locked: false, units: [u_ch8_1, u_ch8_2] },
+  { id: "ch9", title: "Anglais des affaires", level: "B2-C1", icon: "🤝", locked: false, units: [u_ch9_1, u_ch9_2] },
+  { id: "ch10", title: "Débats & Opinions", level: "C1", icon: "🗣️", locked: false, units: [u_ch10_1, u_ch10_2] }
+);
